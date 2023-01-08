@@ -1,0 +1,40 @@
+# Launch brew services on mac
+
+[tasks.start-php]
+command = "brew"
+args = ["services", "start", "php"]
+
+[tasks.start-caddy]
+command = "brew"
+args = ["services", "start", "caddy"]
+
+[tasks.start-postgres]
+command = "brew"
+args = ["services", "start", "postgresql"]
+
+[tasks.start-redis]
+command = "brew"
+args = ["services", "start", "redis"]
+
+[tasks.start-meilisearch]
+command = "brew"
+args = ["services", "start", "meilisearch"]
+
+[tasks.start-mailhog]
+command = "brew"
+args = ["services", "start", "mailhog"]
+
+[tasks.set-caddy-config]
+command = "caddy"
+args = ["reload", "--config", "Caddyfile"]
+
+[tasks.brew-services-start]
+dependencies = [
+    "start-php",
+    "start-caddy",
+    "set-caddy-config"
+]
+
+[tasks.brew-services-stop]
+command = "brew"
+args = ["services", "stop", "--all"]
