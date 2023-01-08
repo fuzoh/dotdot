@@ -4,4 +4,21 @@
 
 > ls replacement, with coloration and speedy
 
+## tokei
+
+## bat
+
+## fzf
+
+## fd
+
+## procs
+
+## sd
+
+## dust
+
+## ripgrep
+
+## zoxide
 
