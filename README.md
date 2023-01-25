@@ -1,6 +1,7 @@
 # dotdot
 
 > A modern replacement for my old antique dotfiles.
+> **Work in progress !**
 
 ## Summary
 
