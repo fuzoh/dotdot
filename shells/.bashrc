@@ -70,3 +70,9 @@ PS1='\[\033[01;31m\]\u\[\033[01;33m\]@\[\033[01;36m\]\h \[\033[01;33m\]\w \[\033
 if [[ -f /usr/local/share/bash-completion/bash_completion.sh ]]; then
     source /usr/local/share/bash-completion/bash_completion.sh
 fi
+
+#--------------------#
+# Aliases
+#--------------------#
+
+source ~/.aliases
