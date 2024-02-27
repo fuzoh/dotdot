@@ -22,7 +22,9 @@ set $lock swaylock -f -c 000000
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu dmenu_path | dmenu | xargs swaymsg exec --
+#set $menu dmenu_path | dmenu | xargs swaymsg exec --
+
+set $menu fuzzel --no-icons -x5 -y5 --background-color=1e272eff --text-color=ecf0f1ff
 
 ### Output configuration
 #

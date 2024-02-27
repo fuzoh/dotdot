@@ -78,5 +78,6 @@ fi
 source ~/.aliases
 
 export XDG_RUNTIME_DIR=/var/run/user/`id -u`
+export MOZ_ENABLE_WAYLAND=1
 
 export GPG_TTY=$(tty)
