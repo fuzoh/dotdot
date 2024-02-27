@@ -78,3 +78,5 @@ fi
 source ~/.aliases
 
 export XDG_RUNTIME_DIR=/var/run/user/`id -u`
+
+export GPG_TTY=$(tty)
