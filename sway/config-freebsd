@@ -240,12 +240,12 @@ bar {
 
     colors {
         statusline #ffffff
-        background #1e1e1e
-	separator #1e1e1e
-	focused_workspace  #008fff #007fff #ffffff
+        background #1e272e
+	separator #485460
+	focused_workspace  #3498db #2980b9 #ffffff
 	active_workspace   #333333 #5f676a #ffffff
-	inactive_workspace #333333 #222222 #888888
-	urgent_workspace   #aa0000 #990000 #ffffff
+	inactive_workspace #485460 #1e272e #485460
+	urgent_workspace   #e74c3c #c0392b #ffffff
     }
 }
 
