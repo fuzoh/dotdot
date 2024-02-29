@@ -26,8 +26,8 @@ export PAGER=less
 export MANPAGER=less
 
 # I prefer to set both EDITOR and VISUAL to Vim or Neovim.
-export EDITOR=nvim
-export VISUAL=nvim
+export EDITOR=hx
+export VISUAL=hx
 
 # Don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
@@ -81,3 +81,25 @@ export XDG_RUNTIME_DIR=/var/run/user/`id -u`
 export MOZ_ENABLE_WAYLAND=1
 
 export GPG_TTY=$(tty)
+
+# Path update
+PATH=$PATH:~/.cargo/bin
+PATH=$PATH:~/.npm-global/bin
+
+# Preview file content using bat (https://github.com/sharkdp/bat)
+export FZF_CTRL_T_OPTS="
+  --preview 'bat -n --color=always {}'
+  --bind 'ctrl-/:change-preview-window(down|hidden|)'"
+
+# CTRL-/ to toggle small preview window to see the full command
+# CTRL-Y to copy the command into clipboard using pbcopy
+export FZF_CTRL_R_OPTS="
+  --preview 'echo {}' --preview-window up:3:hidden:wrap
+  --bind 'ctrl-/:toggle-preview'
+  --bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort'
+  --color header:italic
+  --header 'Press CTRL-Y to copy command into clipboard'"
+
+# Print tree structure in the preview window
+export FZF_ALT_C_OPTS="--preview 'tree -C {}'"
+
