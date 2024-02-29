@@ -42,7 +42,9 @@ output eDP-1 pos 0 0 res 2560x1440
 #output DP-3 scale 2
 output DP-3 pos 1280 0 res 1920x1080
 
-font pango:DejaVu Sans Mono 8
+#font pango:DejaVu Sans Mono 8
+#font pango:Cantarell 10
+font pango:Victor Mono 10
 
 default_border none
 for_window [class="^.*"] border pixel 0
@@ -233,22 +235,26 @@ for_window [window_type="menu"] floating enable
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
+#bar {
+#    position top
+#
+#    # When the status_command prints a new line to stdout, swaybar updates.
+#    # The default just shows the current date and time.
+#    status_command ~/.config/sway/conky-bar.sh
+#
+#    colors {
+#        statusline #ffffff
+#        background #1e272e
+#	separator #485460
+#	focused_workspace  #3498db #2980b9 #ffffff
+#	active_workspace   #333333 #5f676a #ffffff
+#	inactive_workspace #485460 #1e272e #485460
+#	urgent_workspace   #e74c3c #c0392b #ffffff
+#   }
+#}
+
 bar {
-    position top
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    status_command ~/.config/sway/conky-bar.sh
-
-    colors {
-        statusline #ffffff
-        background #1e272e
-	separator #485460
-	focused_workspace  #3498db #2980b9 #ffffff
-	active_workspace   #333333 #5f676a #ffffff
-	inactive_workspace #485460 #1e272e #485460
-	urgent_workspace   #e74c3c #c0392b #ffffff
-    }
+    swaybar_command waybar
 }
 
 include /usr/local/etc/sway/config.d/*
