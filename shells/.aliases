@@ -3,12 +3,7 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
-alias sss='doas shutdown -p now'
-alias rrr='doas shutdown -r now'
+#alias sss='doas shutdown -p now'
+#alias rrr='doas shutdown -r now'
 
 alias sw='sway -c ~/.config/sway/config'
-
-alias bi2='backlight incr 20'
-alias bd2='backlight decr 20'
-alias bi1='backlight incr 10'
-alias bd1='backlight decr 10'
