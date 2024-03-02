@@ -1,6 +1,7 @@
 # Variables initialisation
 # Config directories
 set -gx XDG_CONFIG_HOME ~/.config
+set -gx XDG_DATA_HOME ~/.local/share
 
 # Some varables to help apps to corectly use wayland
 set -gx MOZ_ENABLE_WAYLAND 1
@@ -22,5 +23,6 @@ alias lt="eza --tree --level=2 --long --git"
 if status is-interactive
     # Commands to run in interactive sessions can go here
     starship init fish | source
+    zoxide init fish | source
 end
 
