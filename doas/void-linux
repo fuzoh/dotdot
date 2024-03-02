@@ -1,0 +1,4 @@
+permit persist keepenv :wheel
+permit nopass keepenv root as root
+permit nopass :operator cmd reboot
+permit nopass :wheel cmd xbps-install
