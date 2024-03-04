@@ -51,7 +51,7 @@
   background: #1e272e;
   color: white;
   font-family: Victor Mono, Cantarell, Noto Sans, sans-serif;
-  font-size: 12px;
+  font-size: 16px;
 }
 
 /* Each module */
@@ -62,11 +62,12 @@
 #memory,
 #mode,
 #network,
+#backlight,
 #pulseaudio,
 #temperature,
 #tray {
-  padding-left: 4px;
-  padding-right: 4px;
+  padding-left: 6px;
+  padding-right: 6px;
 }
 
 
@@ -177,8 +178,8 @@
   border-top: 2px solid transparent;
   /* To compensate for the top border and still have vertical centering */
   padding-bottom: 1px;
-  padding-left: 2px;
-  padding-right: 2px;
+  padding-left: 4px;
+  padding-right: 4px;
   color: #485460;
 }
 

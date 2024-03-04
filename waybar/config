@@ -10,23 +10,25 @@
     // Global configuration
     // -------------------------------------------------------------------------
 
-    "layer": "top",
+    "layer": "bottom",
 
     "position": "top",
 
     // If height property would be not present, it'd be calculated dynamically
-    "height": 20,
+    "height": 30,
 
     "modules-left": [
-        "sway/workspaces",
-        "sway/mode"
+        "network",
+    ],
+    "modules-center": [
+        "hyprland/workspaces",  
     ],
     "modules-right": [
-        //"network",
         "memory",
         "cpu",
         "temperature",
         "battery",
+        "backlight",
         "clock#date",
         "clock#time"
     ],
@@ -54,7 +56,7 @@
 
     "clock#date": {
       "interval": 120,
-      "format": "{:%A %d-%m-%Y}", // Icon: calendar-alt
+      "format": "{:%A %d-%m-%Y}",
       "tooltip": false
     },
 
@@ -79,12 +81,16 @@
 
     "network": {
         "interval": 120,
-        "format": "{ifname}"
+        "format": "{ifname} {ipaddr}"
     },
 
     "sway/mode": {
         "format": "{}",
         "tooltip": false
+    },
+
+    "hyprland/workspaces": {
+        "format": "{name}"
     },
 
     "sway/window": {
@@ -96,6 +102,11 @@
         "all-outputs": false,
         "disable-scroll": true,
         "format": "{name}",
+    },
+
+    "backlight": {
+        "device": "acpi_video0",
+        "format": "{percent}% {icon}"
     },
 
     //"pulseaudio": {
