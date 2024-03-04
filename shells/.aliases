@@ -6,4 +6,4 @@ alias egrep='egrep --color=auto'
 #alias sss='doas shutdown -p now'
 #alias rrr='doas shutdown -r now'
 
-alias sw='sway -c ~/.config/sway/config'
+alias sw='exec dbus-run-session sway -c ~/.config/sway/config'

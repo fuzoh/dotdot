@@ -78,7 +78,11 @@ fi
 source ~/.aliases
 
 #export XDG_RUNTIME_DIR=/var/run/user/`id -u`
+export XDG_CONFIG_HOME=~/.config
 export MOZ_ENABLE_WAYLAND=1
+export QT_QPA_PLATFORM=wayland-egl
+export ELM_DISPLAY=wl
+export SDL_VIDEODRIVER=wayland
 
 export GPG_TTY=$(tty)
 

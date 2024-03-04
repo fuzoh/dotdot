@@ -24,7 +24,8 @@ set $lock swaylock -f -c 000000
 # on the original workspace that the command was run on.
 #set $menu dmenu_path | dmenu | xargs swaymsg exec --
 
-set $menu fuzzel --no-icons -x5 -y5 --background-color=1e272eff --text-color=ecf0f1ff
+#set $menu fuzzel --no-icons -x5 -y5 --background-color=1e272eff --text-color=ecf0f1ff
+set $menu dmenu_path | wmenu | xargs swaymsg exec --
 
 ### Output configuration
 #
@@ -37,14 +38,11 @@ set $menu fuzzel --no-icons -x5 -y5 --background-color=1e272eff --text-color=ecf
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
-output eDP-1 scale 2
+# Notebook screen configuration
+output eDP-1 scale 1
 output eDP-1 pos 0 0 res 2560x1440
-#output DP-3 scale 2
-output DP-3 pos 1280 0 res 1920x1080
 
-#font pango:DejaVu Sans Mono 8
-#font pango:Cantarell 10
-#font pango:Victor Mono 10
+font pango:Victor Mono 14
 
 default_border none
 for_window [class="^.*"] border pixel 0
@@ -81,6 +79,12 @@ input "type:keyboard" {
 	xkb_layout ch(fr)
 	repeat_delay 300
 	repeat_rate 45
+}
+
+input "1267:12780:ELAN0767:00_04F3:31EC_Touchpad" {
+    tap enabled
+    natural_scroll enabled
+    pointer_accel 0.5
 }
 
 
@@ -138,11 +142,16 @@ input "type:keyboard" {
 #
 # Workspaces:
 #
+    # Workspaces
+    set $ws1 1:term
+    set $ws2 2:code
+    set $ws3 3:web
+    set $ws4 4:admin
     # Switch to workspace
-    bindsym $mod+1 workspace number 1
-    bindsym $mod+2 workspace number 2
-    bindsym $mod+3 workspace number 3
-    bindsym $mod+4 workspace number 4
+    bindsym $mod+1 workspace $ws1
+    bindsym $mod+2 workspace $ws2
+    bindsym $mod+3 workspace $ws3
+    bindsym $mod+4 workspace $ws4
     bindsym $mod+5 workspace number 5
     bindsym $mod+6 workspace number 6
     bindsym $mod+7 workspace number 7
@@ -150,10 +159,10 @@ input "type:keyboard" {
     bindsym $mod+9 workspace number 9
     bindsym $mod+0 workspace number 10
     # Move focused container to workspace
-    bindsym $mod+Shift+1 move container to workspace number 1
-    bindsym $mod+Shift+2 move container to workspace number 2
-    bindsym $mod+Shift+3 move container to workspace number 3
-    bindsym $mod+Shift+4 move container to workspace number 4
+    bindsym $mod+Shift+1 move container to workspace $ws1
+    bindsym $mod+Shift+2 move container to workspace $ws2
+    bindsym $mod+Shift+3 move container to workspace $ws3
+    bindsym $mod+Shift+4 move container to workspace $ws4
     bindsym $mod+Shift+5 move container to workspace number 5
     bindsym $mod+Shift+6 move container to workspace number 6
     bindsym $mod+Shift+7 move container to workspace number 7
@@ -231,31 +240,8 @@ for_window [window_role="Preferences"] floating enable
 for_window [window_type="dialog"] floating enable
 for_window [window_type="menu"] floating enable
 
-#
-# Status Bar:
-#
-# Read `man 5 sway-bar` for more information about this section.
-#bar {
-#    position top
-#
-#    # When the status_command prints a new line to stdout, swaybar updates.
-#    # The default just shows the current date and time.
-#    status_command ~/.config/sway/conky-bar.sh
-#
-#    colors {
-#        statusline #ffffff
-#        background #1e272e
-#	separator #485460
-#	focused_workspace  #3498db #2980b9 #ffffff
-#	active_workspace   #333333 #5f676a #ffffff
-#	inactive_workspace #485460 #1e272e #485460
-#	urgent_workspace   #e74c3c #c0392b #ffffff
-#   }
-#}
-
-bar {
-    swaybar_command waybar
-}
+# Waybar
+bar swaybar_command waybar
 
 #include /usr/local/etc/sway/config.d/*
 include /etc/sway/config.d/*

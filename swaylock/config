@@ -4,7 +4,3 @@ indicator-thickness=14
 daemonize
 ignore-empty-password
 indicator-idle-visible
-
-clock
-timestr=%H:%M
-datestr=%Y-%m-%d
