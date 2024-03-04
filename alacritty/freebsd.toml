@@ -1,5 +1,8 @@
 [font]
-size = 10.0
+size = 16.0
+
+[font.offset]
+y = 1
 
 [font.normal]
 family = "Victor Mono"
@@ -7,3 +10,7 @@ style = "Regular"
 
 [font.bold]
 style = "Medium"
+
+[window.padding]
+x = 2
+y = 2
