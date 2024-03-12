@@ -15,7 +15,7 @@
     "position": "top",
 
     // If height property would be not present, it'd be calculated dynamically
-    "height": 30,
+    "height": 28,
 
     "modules-left": [
         "network",
@@ -29,6 +29,7 @@
         "temperature",
         "battery",
         "backlight",
+        "pulseaudio",
         "clock#date",
         "clock#time"
     ],
@@ -106,25 +107,25 @@
 
     "backlight": {
         "device": "acpi_video0",
-        "format": "{percent}% {icon}"
+        "format": "{percent}%"
     },
 
-    //"pulseaudio": {
-    //    //"scroll-step": 1,
-    //    "format": "{icon}  {volume}%",
-    //    "format-bluetooth": "{icon}  {volume}%",
-    //    "format-muted": "",
-    //    "format-icons": {
-    //        "headphones": "",
-    //        "handsfree": "",
-    //        "headset": "",
-    //        "phone": "",
-    //        "portable": "",
-    //        "car": "",
-    //        "default": ["", ""]
-    //    },
-    //    "on-click": "pavucontrol"
-    //},
+    "pulseaudio": {
+        //"scroll-step": 1,
+        "format": "{volume}%",
+        //"format-bluetooth": "{volume}%",
+        //"format-muted": "",
+        //"format-icons": {
+        //    "headphones": "",
+        //    "handsfree": "",
+        //    "headset": "",
+        //    "phone": "",
+        //    "portable": "",
+        //    "car": "",
+        //    "default": ["", ""]
+        //},
+        "on-click": "pavucontrol"
+    },
 
     "temperature": {
       "critical-threshold": 80,
