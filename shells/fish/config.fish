@@ -13,6 +13,8 @@ set -gx GPG_TTY (tty)
 
 # Add some variables to path
 fish_add_path -aP ~/.cargo/bin
+fish_add_path -aP ~/.npm-global/bin
+fish_add_path -aP ~/.bin
 
 # Some aliases
 alias ls="eza"
@@ -28,3 +30,10 @@ if status is-interactive
     cd
 end
 
+
+# pnpm
+set -gx PNPM_HOME "/home/bastien/.local/share/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end
