@@ -20,6 +20,8 @@ fish_add_path -aP ~/.bin
 alias ls="eza"
 alias ll="eza --long --git --all"
 alias lt="eza --tree --level=2 --long --git"
+alias sail="./vendor/bin/sail"
+alias artisan="php artisan"
 
 
 if status is-interactive
