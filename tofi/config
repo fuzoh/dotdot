@@ -14,13 +14,13 @@
 	#
 	# Otherwise, fonts are interpreted in Pango format.
 	
-font = /home/bastien/.fonts/VictorMono-Regular.otf
+font = /home/bastien/.fonts/CartographCF-Regular.otf
 
 anchor = top
 width = 100%
-height = 30
+height = 28
 horizontal = true
-font-size = 14
+font-size = 13
 prompt-text = ""
 outline-width = 0
 border-width = 0
