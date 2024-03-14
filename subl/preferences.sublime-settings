@@ -1,0 +1,14 @@
+{
+	"font_size": 18,
+	"font_face": "Victor Mono",
+	"line_padding_top": 6,
+	"line_padding_bottom": 0,
+	"ignored_packages":
+	[
+		"Vintage",
+	],
+	"index_files": true,
+	"theme": "ayu-mirage.sublime-theme",
+	"color_scheme": "Packages/ayu/ayu-mirage.sublime-color-scheme",
+	"highlight_line": true,
+}
