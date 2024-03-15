@@ -89,3 +89,5 @@ export GPG_TTY=$(tty)
 # Path update
 #PATH=$PATH:~/.cargo/bin
 #PATH=$PATH:~/.npm-global/bin
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
