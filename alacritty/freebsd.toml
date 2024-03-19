@@ -14,3 +14,18 @@ style = "Medium"
 [window.padding]
 x = 2
 y = 2
+
+[[keyboard.bindings]]
+action = "ResetFontSize"
+key = "Key0"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "IncreaseFontSize"
+key = "PageUp"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "DecreaseFontSize"
+key = "PageDown"
+mods = "Control"
