@@ -17,3 +17,9 @@ You can copy fonts in your user `.fonts` directory. Then use `fc-cache -r` to re
 ## doas
 
 [doas tutorial](https://flak.tedunangst.com/post/doas-mastery)
+
+## Apple studio display brightness
+
+To control studio display brightness, use [asdbctl](https://github.com/juliuszint/asdbctl).
+Clone the repo, build the rust binary with `--release` flag. Then copy it to `.bin`.
+
