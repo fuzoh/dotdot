@@ -3,6 +3,9 @@
 set -gx XDG_CONFIG_HOME ~/.config
 set -gx XDG_DATA_HOME ~/.local/share
 
+set -gx LIBVA_DRIVER_NAME radeonsi
+set -gx VDPAU_DRIVER radeonsi
+
 # Some varables to help apps to corectly use wayland
 set -gx MOZ_ENABLE_WAYLAND 1
 set -gx QT_QPA_PLATFORM wayland-egl
