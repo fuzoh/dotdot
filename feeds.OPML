@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0">
+  <head>
+    <title>NewsFlash OPML export</title>
+  </head>
+  <body>
+    <outline text="Release notes" title="Release notes">
+      <outline title="Release notes from Hyprland" htmlUrl="https://github.com/hyprwm/Hyprland/releases" text="Release notes from Hyprland" type="rss" xmlUrl="https://github.com/hyprwm/Hyprland/releases.atom" />
+      <outline text="Release notes from thorium" type="rss" title="Release notes from thorium" xmlUrl="https://github.com/Alex313031/thorium/releases.atom" htmlUrl="https://github.com/Alex313031/thorium/releases" />
+    </outline>
+    <outline htmlUrl="https://tonsky.me/" title="tonsky.me" type="rss" xmlUrl="https://tonsky.me/blog/atom.xml" text="tonsky.me" />
+    <outline htmlUrl="https://www.postgresql.org/" title="PostgreSQL news" text="PostgreSQL news" type="rss" xmlUrl="https://www.postgresql.org/news.rss" />
+    <outline text="Par temps clair" type="rss" xmlUrl="https://par-temps-clair.blogspot.com/feeds/posts/default?alt=rss" htmlUrl="https://par-temps-clair.blogspot.com/" title="Par temps clair" />
+    <outline type="rss" xmlUrl="https://www.depesz.com/feed/" text="select * from depesz;" htmlUrl="https://www.depesz.com/feed/" title="select * from depesz;" />
+    <outline xmlUrl="https://vermaden.wordpress.com/feed/" text="𝚟𝚎𝚛𝚖𝚊𝚍𝚎𝚗" htmlUrl="https://vermaden.wordpress.com/feed/" type="rss" title="𝚟𝚎𝚛𝚖𝚊𝚍𝚎𝚗" />
+    <outline title="3-Star learning experiences" text="3-Star learning experiences" type="rss" xmlUrl="https://3starlearningexperiences.wordpress.com/feed/" htmlUrl="https://3starlearningexperiences.wordpress.com/feed/" />
+    <outline type="rss" title="Codeberg News" text="Codeberg News" xmlUrl="https://blog.codeberg.org/feeds/all.atom.xml" htmlUrl="https://blog.codeberg.org/" />
+    <outline htmlUrl="https://scienceetonnante.substack.com/" text="Science Étonnante" title="Science Étonnante" type="rss" xmlUrl="https://scienceetonnante.substack.com/feed" />
+    <outline type="rss" htmlUrl="https://www.stitcher.io/rss" title="stitcher.io" text="stitcher.io" xmlUrl="https://stitcher.io/rss" />
+    <outline title="nixCraft: Linux Tips, Hacks, Tutorials, And Ideas In Blog Format (RSS/FEED)" htmlUrl="https://www.cyberciti.biz/atom/" text="nixCraft: Linux Tips, Hacks, Tutorials, And Ideas In Blog Format (RSS/FEED)" type="rss" xmlUrl="https://www.cyberciti.biz/atom/atom.xml" />
+    <outline title="Luca Palmieri" type="rss" text="Luca Palmieri" xmlUrl="https://www.lpalmieri.com/rss.xml" htmlUrl="https://www.lpalmieri.com/" />
+    <outline title="The JetBrains Blog" xmlUrl="https://blog.jetbrains.com/feed/" type="rss" text="The JetBrains Blog" htmlUrl="https://blog.jetbrains.com/feed/" />
+    <outline text="unixdigest.com" type="rss" xmlUrl="https://unixsheikh.com/feed.rss" htmlUrl="https://unixdigest.com/" title="unixdigest.com" />
+    <outline text="Laravel News" htmlUrl="https://feedpress.superfeedr.com/" title="Laravel News" xmlUrl="https://feed.laravel-news.com/" type="rss" />
+    <outline text="AnandTech" title="AnandTech" xmlUrl="https://www.anandtech.com/rss/" type="rss" htmlUrl="https://www.anandtech.com/" />
+  </body>
+</opml>
