@@ -51,7 +51,7 @@
   background: transparent;
   color: white;
   font-family: SF Compact Display, Cantarell, Noto Sans, sans-serif;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 /* Each module */
@@ -66,8 +66,8 @@
 #pulseaudio,
 #temperature,
 #tray {
-  padding-left: 6px;
-  padding-right: 6px;
+  padding-left: 4px;
+  padding-right: 4px;
 }
 
 
@@ -165,12 +165,12 @@
 }
 
 #workspaces button {
-  margin: 4px 3px;
-  border-radius: 6px;
+  margin: 3px 2px;
+  border-radius: 4px;
   font-weight: bold;
   /* To compensate for the top border and still have vertical centering */
-  padding-left: 3px;
-  padding-right: 3px;
+  padding-left: 2px;
+  padding-right: 2px;
   color: #485460;
 }
 

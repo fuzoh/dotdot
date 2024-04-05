@@ -15,7 +15,7 @@
     "position": "top",
 
     // If height property would be not present, it'd be calculated dynamically
-    "height": 28,
+    "height": 26,
 
     "modules-left": [
         "network",
