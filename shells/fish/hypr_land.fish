@@ -1,3 +1,3 @@
-function hypr_land
+function h
     dbus-run-session Hyprland
 end

@@ -2,6 +2,7 @@
 # Config directories
 set -gx XDG_CONFIG_HOME ~/.config
 set -gx XDG_DATA_HOME ~/.local/share
+#set -gx XDG_RUNTIME_DIR /run/user/1000
 
 set -gx LIBVA_DRIVER_NAME radeonsi
 set -gx VDPAU_DRIVER radeonsi
@@ -15,7 +16,8 @@ set -gx SDL_VIDEODRIVER wayland
 set -gx GPG_TTY (tty)
 
 # Add some variables to path
-fish_add_path -aP ~/.cargo/bin
+#fish_add_path -aP ~/.cargo/bini
+source "$HOME/.cargo/env.fish"
 fish_add_path -aP ~/.npm-global/bin
 fish_add_path -aP ~/.bin
 
