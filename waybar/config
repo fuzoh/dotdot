@@ -57,7 +57,7 @@
 
     "clock#date": {
       "interval": 120,
-      "format": "{:%A %d-%m-%Y}",
+      "format": "{:%A %Y-%m-%d}",
       "tooltip": false
     },
 
