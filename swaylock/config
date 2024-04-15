@@ -1,5 +1,6 @@
 indicator-radius=100
 indicator-thickness=14
+font=SF Pro Display
 
 daemonize
 ignore-empty-password
