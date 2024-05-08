@@ -1,0 +1,5 @@
+-Xmx4096m
+-Dide.managed.by.toolbox=/home/bastien/.local/share/JetBrains/Toolbox/bin/jetbrains-toolbox
+-Dtoolbox.notification.token=d1512b99-05aa-471c-9f57-3b1fba06de46
+-Dtoolbox.notification.portFile=/home/bastien/.cache/JetBrains/Toolbox/ports/1154948159.port
+-Dsun.java2d.uiScale=2
