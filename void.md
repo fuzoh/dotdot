@@ -23,3 +23,8 @@ You can copy fonts in your user `.fonts` directory. Then use `fc-cache -r` to re
 To control studio display brightness, use [asdbctl](https://github.com/juliuszint/asdbctl).
 Clone the repo, build the rust binary with `--release` flag. Then copy it to `.bin`.
 
+## Hyprland update
+
+[see infos on void-hyprland repo](https://github.com/Makrennel/hyprland-void)
+
+Don't forget update void-packages sources.
