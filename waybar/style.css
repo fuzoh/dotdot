@@ -64,6 +64,7 @@
 #network,
 #backlight,
 #pulseaudio,
+#wireplumber,
 #temperature,
 #tray {
   padding-left: 4px;
