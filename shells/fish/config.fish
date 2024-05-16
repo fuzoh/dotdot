@@ -31,6 +31,7 @@ alias lt="eza --tree --level=2 --long --git"
 alias sail="./vendor/bin/sail"
 alias artisan="php artisan"
 alias pint="./vendor/bin/pint"
+alias t="task"
 
 
 if status is-interactive
@@ -47,6 +48,6 @@ set -gx PATH "$VOLTA_HOME/bin" $PATH
 # pnpm
 set -gx PNPM_HOME "/home/bastien/.local/share/pnpm"
 if not string match -q -- $PNPM_HOME $PATH
-  set -gx PATH "$PNPM_HOME" $PATH
+    set -gx PATH "$PNPM_HOME" $PATH
 end
 # pnpm end
