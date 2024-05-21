@@ -12,6 +12,6 @@ volta install node
 
 volta install npm
 
-volta install npm
+volta install pnpm
 
 flatpak update
