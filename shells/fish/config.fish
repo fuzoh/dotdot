@@ -32,6 +32,7 @@ alias sail="./vendor/bin/sail"
 alias artisan="php artisan"
 alias pint="./vendor/bin/pint"
 alias t="task"
+alias ip="ip --color=auto"
 
 
 if status is-interactive
