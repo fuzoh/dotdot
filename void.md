@@ -28,3 +28,21 @@ Clone the repo, build the rust binary with `--release` flag. Then copy it to `.b
 [see infos on void-hyprland repo](https://github.com/Makrennel/hyprland-void)
 
 Don't forget update void-packages sources.
+Sometimes you will need to remove the old installed packages and reinstall to updates the libraries paths. Use `xbps-remove`.
+
+## Update thorium with .desktop
+
+You can find [thorium relases here](https://github.com/Alex313031/thorium/releases).
+
+You can get the right AppImage from this release page. Use AVX2 build if your CPU supports it.
+Then, you will need to extract the app image to retrieve the .desktop file.
+
+```sh
+Thorium.....xxx.AppImage --appimage-extract # This will create a squashfs-root
+# You can now copy the .AppImage from the squashfs-root to your app folder, for example :
+cp ./squashfs-root/thorium-browser.desktop ~/.local/share/applications/
+# Then, you can remove the squashfs, set the AppImage executable, and move it to one of your binary folders
+rm -Rf ./squashfs-root
+chmod +x ./Thorium...xxx.AppImage
+mv ./Thorium...xxx.AppImage ~/.bin/thorium
+```
