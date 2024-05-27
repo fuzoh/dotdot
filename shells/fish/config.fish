@@ -33,7 +33,7 @@ alias artisan="php artisan"
 alias pint="./vendor/bin/pint"
 alias t="task"
 alias ip="ip --color=auto"
-
+alias pgc="pass generate -c"
 
 if status is-interactive
     # Commands to run in interactive sessions can go here
