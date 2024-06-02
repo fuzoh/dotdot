@@ -46,3 +46,13 @@ rm -Rf ./squashfs-root
 chmod +x ./Thorium...xxx.AppImage
 mv ./Thorium...xxx.AppImage ~/.bin/thorium
 ```
+
+
+## Tessen for pass search
+
+```sh
+curl -LO https://git.sr.ht/~ayushnix/tessen/refs/download/v2.2.3/tessen-2.2.3.tar.gz
+tar xvzf tessen-2.2.3.tar.gz
+cd tessen-2.2.3/
+sudo make install
+```
