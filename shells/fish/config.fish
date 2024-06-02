@@ -3,6 +3,7 @@
 set -gx XDG_CONFIG_HOME ~/.config
 set -gx XDG_DATA_HOME ~/.local/share
 #set -gx XDG_RUNTIME_DIR /run/user/1000
+set -gx EDITOR hx
 
 set -gx LIBVA_DRIVER_NAME radeonsi
 set -gx VDPAU_DRIVER radeonsi
@@ -20,6 +21,7 @@ set -gx GPG_TTY (tty)
 source "$HOME/.cargo/env.fish"
 fish_add_path -aP ~/.npm-global/bin
 fish_add_path -aP ~/.bin
+fish_add_path -aP ~/.local/bin
 
 # Start ssh agent
 fish_ssh_agent
