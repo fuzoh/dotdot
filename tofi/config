@@ -13,7 +13,7 @@
 	# characters not in the chosen font will fail to render.
 	#
 	# Otherwise, fonts are interpreted in Pango format.	
-font = /home/bastien/.fonts/SF-Compact-Display-Light.otf
+font = /home/bastien/.fonts/SF-Compact-Display-Regular.otf
 
 anchor = top
 width = 100%
@@ -24,12 +24,15 @@ prompt-text = ""
 outline-width = 0
 border-width = 0
 background-color = #000000
-min-input-width = 200
+text-color = #FFFFFF
+selection-color = #FFFFFF
+default-result-color = #AAAAAA
+min-input-width = 100
 result-spacing = 15
 padding-top = 4
 padding-bottom = 0
-padding-left = 0
-padding-right = 0
+padding-left = 4
+padding-right = 4
 
 #
 ### Behaviour
