@@ -22,6 +22,7 @@ source "$HOME/.cargo/env.fish"
 fish_add_path -aP ~/.npm-global/bin
 fish_add_path -aP ~/.bin
 fish_add_path -aP ~/.local/bin
+fish_add_path -aP ~/flutter/bin
 
 # Start ssh agent
 fish_ssh_agent
