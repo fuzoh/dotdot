@@ -5,3 +5,4 @@ font=SF Pro Display
 daemonize
 ignore-empty-password
 indicator-idle-visible
+no-unlock-indicator
