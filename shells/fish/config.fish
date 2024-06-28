@@ -13,6 +13,8 @@ set -gx MOZ_ENABLE_WAYLAND 1
 set -gx QT_QPA_PLATFORM wayland-egl
 set -gx ELM_DISPLAY wl
 set -gx SDL_VIDEODRIVER wayland
+# Electron wayland flag
+set -gx ELECTRON_OZONE_PLATFORM_HINT wayland
 
 set -gx GPG_TTY (tty)
 
