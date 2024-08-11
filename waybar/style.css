@@ -152,14 +152,20 @@
   border-radius: 4px;
   font-weight: bold;
   /* To compensate for the top border and still have vertical centering */
-  padding-left: 1px;
-  padding-right: 1px;
-  color: #576574;
+  padding-left: 8px;
+  padding-right: 8px;
+  color: #d2dae2;
+  background-color: #1e272e;
+}
+
+#workspaces button:hover {
+  color: #1e272e;
+  background-color: #d2dae2;
 }
 
 #workspaces button.active {
   color: white;
-  background-color: #576574;
+  background-color: #485460;
 }
 
 #workspaces button.urgent {
