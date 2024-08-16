@@ -42,7 +42,8 @@ alias pgc="pass generate -c"
 alias pgns="pass generate -c --no-symbols"
 alias gui="gitui"
 alias lg="lazygit"
-
+alias tl="task list"
+alias ta="task add"
 
 if status is-interactive
     # Commands to run in interactive sessions can go here
