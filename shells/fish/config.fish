@@ -44,6 +44,9 @@ alias gui="gitui"
 alias lg="lazygit"
 alias tl="task list"
 alias ta="task add"
+# VPN
+alias vUP="doas wg-quick up"
+alias vDOWN="doas wg-quick down"
 
 if status is-interactive
     # Commands to run in interactive sessions can go here
