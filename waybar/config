@@ -84,7 +84,8 @@
     "network": {
         "interval": 120,
         "format": "{ifname} {ipaddr}",
-        "format-wifi": "{ifname} {signaldBm} {ipaddr}"
+        "format-wifi": "{ifname} {signaldBm} {frequency} {ipaddr}",
+        "format-ethernet": "{ifname} {ipaddr}/{cidr}"
     },
 
     "sway/mode": {
