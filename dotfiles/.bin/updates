@@ -14,4 +14,6 @@ volta install npm
 
 volta install pnpm
 
+bun upgrade
+
 flatpak update
