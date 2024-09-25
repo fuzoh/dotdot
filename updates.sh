@@ -1,19 +1,31 @@
 #!/bin/bash
 
+echo "### Void linux"
 doas xbps-install -Su
 
+echo "### Rust toolchain"
 rustup self update
 
+echo "### Rustup tooling"
 rustup update
 
+echo "### Cargo packages"
 cargo install-update --all
 
+echo "### Volta node update"
 volta install node
 
+echo "### Volta npm update"
 volta install npm
 
+echo "### Volta pnpm update"
 volta install pnpm
 
+echo "### Bun update"
 bun upgrade
 
+echo "### Flutter toolchain update"
+flutter upgrade
+
+echo "### Flatpaks update"
 flatpak update
