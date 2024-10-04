@@ -52,6 +52,13 @@ alias ta="task add"
 alias vUP="doas wg-quick up"
 alias vDOWN="doas wg-quick down"
 
+# Git
+alias pl="git pull"
+alias ph="git push"
+alias sm="git switch main && git pull"
+alias sn="git switch -c"
+
+
 if status is-interactive
     # Commands to run in interactive sessions can go here
     starship init fish | source
