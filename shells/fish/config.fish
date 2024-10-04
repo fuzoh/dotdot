@@ -8,6 +8,10 @@ set -gx EDITOR hx
 set -gx LIBVA_DRIVER_NAME radeonsi
 set -gx VDPAU_DRIVER radeonsi
 
+# Temporary workaround, apparentily actual mesa drivers has a bug with vulkan used as defalut renderer from gtk 4.16 https://gitlab.gnome.org/GNOME/gtk/-/issues/7010
+# Need to check evolution in next weeks
+set -gx GSK_RENDERER ngl
+
 # Some varables to help apps to corectly use wayland
 set -gx MOZ_ENABLE_WAYLAND 1
 set -gx QT_QPA_PLATFORM wayland-egl
