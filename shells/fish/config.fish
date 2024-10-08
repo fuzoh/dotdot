@@ -10,7 +10,7 @@ set -gx VDPAU_DRIVER radeonsi
 
 # Temporary workaround, apparentily actual mesa drivers has a bug with vulkan used as defalut renderer from gtk 4.16 https://gitlab.gnome.org/GNOME/gtk/-/issues/7010
 # Need to check evolution in next weeks
-set -gx GSK_RENDERER ngl
+#set -gx GSK_RENDERER ngl
 
 # Some varables to help apps to corectly use wayland
 set -gx MOZ_ENABLE_WAYLAND 1
@@ -29,6 +29,7 @@ fish_add_path -aP ~/.npm-global/bin
 fish_add_path -aP ~/.bin
 fish_add_path -aP ~/.local/bin
 fish_add_path -aP ~/flutter/bin
+fish_add_path -aP ~/go/bin
 
 # Start ssh agent
 fish_ssh_agent
