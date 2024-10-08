@@ -1,0 +1,2 @@
+provider: google
+whitelist: [google,archwiki,dockerhub,duckduckgo,github,googlemaps,wikipedia,youtube]
