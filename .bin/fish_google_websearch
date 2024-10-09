@@ -1,0 +1,10 @@
+#!/usr/bin/env fish
+
+
+# Get the query
+set query (cat /dev/null | tofi)
+
+# Perform search
+s -p google "$query"
+
+hyprctl dispatch focusurgentorlast
