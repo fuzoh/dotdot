@@ -1,0 +1,6 @@
+#!/bin/bash
+
+pass git push ssd_2to_home --all
+pass git push local --all
+pass git push ssd_1to_jt --all
+pass git push stick64 --all

@@ -1,3 +1,0 @@
-#!/usr/bin/env fish
-
-cat /dev/null | tofi --prompt-text "Jt : " | taskwarrior_add_jt_from_stdin

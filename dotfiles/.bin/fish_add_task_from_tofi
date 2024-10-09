@@ -1,3 +1,0 @@
-#!/usr/bin/env fish
-
-cat /dev/null | tofi --prompt-text "Task : " | taskwarrior_add_from_stdin

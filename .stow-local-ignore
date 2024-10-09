@@ -1,0 +1,9 @@
+# Files and folders ignored by stow
+
+^/README.*
+
+\.git
+\.gitignore
+\.gitmodules
+
+\others

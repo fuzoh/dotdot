@@ -1,0 +1,14 @@
+function fish_global_websearch
+
+    # Get the providers
+    set provider (s --list-providers | tofi --fuzzy-match true)
+
+    # Get the query
+    set query (cat /dev/null | tofi)
+
+    # Perform search
+    s -p "$provider" "$query"
+
+    hyprctl dispatch focusurgentorlast
+
+end

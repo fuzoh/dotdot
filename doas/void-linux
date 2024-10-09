@@ -1,5 +1,0 @@
-permit persist keepenv :wheel
-permit nopass keepenv root as root
-permit nopass :operator as root cmd poweroff
-permit nopass :wheel as root cmd xbps-install
-permit nopass :wheel as root cmd /home/bastien/.cargo/bin/asdbctl
