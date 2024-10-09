@@ -62,10 +62,10 @@ alias sn="git switch -c"
 
 if status is-interactive
     # Commands to run in interactive sessions can go here
-    starship init fish | source
-    zoxide init fish | source
-    atuin init fish | source
-    set fish_greeting
+    starship init fish | source # Setup shell prompt
+    zoxide init fish | source # Zoxide for jump to cd command
+    atuin init fish | source # Shell history
+    set fish_greeting # Remove fish greeting
     cd
 end
 
