@@ -6,4 +6,4 @@
 \.gitignore
 \.gitmodules
 
-\others
+^/others/*
