@@ -3,6 +3,11 @@
 > Personal dotfiles, actually working on [void-linux](https://voidlinux.org/).
 > You can apply them with [stow](https://www.gnu.org/software/stow/)
 
+Clone this repo in your home `cd && git clone <REPO_URL>`.
+Use `stow .` from the root folder of the cloned repo.
+
+*Maybe you will wand to use `stow . --adopt` then `git diff` to compare your dotfiles with these one.
+
 ## Tips and triks
 
 ### Network
