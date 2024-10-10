@@ -62,6 +62,35 @@ cd tessen-2.2.3/
 sudo make install
 ```
 
+### Video recording and edition
+
+To make efficient recordings and video edition without using much CPU but with 4k quality, i use :
+- [wl-screenrec](https://github.com/russelltg/wl-screenrec)
+- [ffmpeg](https://git.ffmpeg.org/ffmpeg.git)
+
+With *wl-screenrec* I record my screen directly from the GPU buffers, and encode it in [AV1](https://aomediacodec.github.io/av1-spec/av1-spec.pdf)
+with the hardware encoder available with my CPU.
+Then, I use *ffmpeg* to cut and merge videos with the `--copy` flag to avoid reencoding, this allow instant cuts and megrges.
+
+```
+# Recording with wl-screenrec
+wl-screenrec -o DP-1 --codec av1 --audio --low-power off --filename path_to_file.mp4
+# -o to select monitor to record
+# --low-power seems to avoid problems in my setup
+
+# Cut the video with ffmpeg
+ffmpeg -i filename.mp4 --ss 00:01:00 -to 00:12:02 -c copy output_file.mp4
+# -ss specify the start timecode (wideo before will be cut)
+# -to specify the end timecode (video after will be cut)
+# -c copy tells ffmpeg to not reencode the video
+
+# Assemble multiple videos
+# Create a text file with all the paths to the videos you want to merge
+echo "file 'part1.mp4'\nfile 'part2.mp4'" > videos.txt
+# Perform merge
+ffmpeg -f concat -i videos.txt -map 0:v -map 0:a -c copy merged_video.mp4
+```
+
 ## Todo
 
 ### Pass configuration
