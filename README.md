@@ -91,6 +91,17 @@ echo "file 'part1.mp4'\nfile 'part2.mp4'" > videos.txt
 ffmpeg -f concat -i videos.txt -map 0:v -map 0:a -c copy merged_video.mp4
 ```
 
+To edit the audio and apply compression and equalisation :
+```
+# Extract the audio file from the video
+ffmpeg -i my_video.mp4 -vn -acodec copy audio.aac
+
+# Then edit the audio file in your daw, apply compression, equalization... Render a new audio file.
+
+# Insert the new audio file as the video audio track
+ffmpeg -i my_video.mp4 -i my_new_audio.aac -c:v copy -map 0:v:0 -map 1:a:0 video_with_audio.mp4
+```
+
 ## Todo
 
 ### Pass configuration
