@@ -1,0 +1,16 @@
+#!/usr/bin/env fish
+
+#pkill wl-screenrec && exit
+
+# Get datetime
+set date_file (date "+%Y-%m-%d_%H:%M:%S")
+
+# Path to save
+set path_file "$HOME/Videos/"
+
+set postfix_file "_DP-1_av1_opus.mp4"
+
+set FILE_NAME $path_file$date_file$postfix_file
+
+# Start recording
+wl-screenrec -o DP-1 --codec av1 --audio --low-power off --audio-codec opus --filename "$FILE_NAME"
