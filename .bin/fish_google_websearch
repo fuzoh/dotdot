@@ -4,7 +4,11 @@
 # Get the query
 set query (cat /dev/null | tofi)
 
-# Perform search
-s -p google "$query"
+if test -n "$query"
 
-hyprctl dispatch focusurgentorlast
+    # Perform search
+    s -p google "$query"
+
+    hyprctl dispatch focusurgentorlast
+
+end

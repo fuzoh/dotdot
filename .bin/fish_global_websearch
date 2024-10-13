@@ -3,10 +3,18 @@
 # Get the providers
 set provider (s --list-providers | tofi --fuzzy-match true)
 
-# Get the query
-set query (cat /dev/null | tofi)
+if test -n "$provider"
 
-# Perform search
-s -p "$provider" "$query"
+    # Get the query
+    set query (cat /dev/null | tofi)
 
-hyprctl dispatch focusurgentorlast
+    if test -n "$query"
+
+        # Perform search
+        s -p "$provider" "$query"
+
+        hyprctl dispatch focusurgentorlast
+
+    end
+
+end
