@@ -1,0 +1,8 @@
+#!/usr/bin/env fish
+
+
+set date_file (date "+%Y-%m-%d_%H:%M:%S")
+
+set name "~/SyncPerso/Notes/$date_file.note.md"
+
+hx "$name"
