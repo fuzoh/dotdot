@@ -54,6 +54,7 @@ abbr -a vUP "doas wg-quick up"
 abbr -a vDOWN "doas wg-quick down"
 
 # Git
+abbr -a cm "git commit -m"
 abbr -a pl "git pull"
 abbr -a ph "git push"
 abbr -a sm "git switch main && git pull"
