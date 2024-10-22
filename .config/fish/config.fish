@@ -38,26 +38,26 @@ fish_ssh_agent
 alias ls="eza"
 alias ll="eza --long --git --all"
 alias lt="eza --tree --level=2 --long --git"
-alias sail="./vendor/bin/sail"
-alias artisan="php artisan"
-alias pint="./vendor/bin/pint"
-alias t="task"
+abbr -a sail "./vendor/bin/sail"
+abbr -a artisan "php artisan"
+abbr -a pint "./vendor/bin/pint"
+abbr -a t task
 alias ip="ip --color=auto"
-alias pgc="pass generate -c"
-alias pgns="pass generate -c --no-symbols"
-alias gui="gitui"
-alias lg="lazygit"
-alias tl="task list"
-alias ta="task add"
+abbr -a pgc "pass generate -c"
+abbr -a pgns "pass generate -c --no-symbols"
+abbr -a gui gitui
+abbr -a lg lazygit
+abbr -a tl "task list"
+abbr -a ta "task add"
 # VPN
-alias vUP="doas wg-quick up"
-alias vDOWN="doas wg-quick down"
+abbr -a vUP "doas wg-quick up"
+abbr -a vDOWN "doas wg-quick down"
 
 # Git
-alias pl="git pull"
-alias ph="git push"
-alias sm="git switch main && git pull"
-alias sn="git switch -c"
+abbr -a pl "git pull"
+abbr -a ph "git push"
+abbr -a sm "git switch main && git pull"
+abbr -a sn "git switch -c"
 
 
 if status is-interactive
