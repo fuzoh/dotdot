@@ -21,7 +21,7 @@
 
     "modules-left": [
         "network",
-        "custom/taskwarrior"
+        "custom/taskwarrior",
     ],
     "modules-center": [
         "hyprland/workspaces",  
@@ -35,7 +35,7 @@
         //"pulseaudio",
         "wireplumber",
         "clock#date",
-        "clock#time"
+        "clock#time",
     ],
 
 
@@ -103,7 +103,9 @@
     },
 
     "hyprland/workspaces": {
-        "format": "{name}"
+        "format": "{name}",
+        "active-only": false,
+        "all-output": false
     },
 
     "sway/window": {
