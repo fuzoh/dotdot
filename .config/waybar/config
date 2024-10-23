@@ -21,6 +21,7 @@
 
     "modules-left": [
         "network",
+        "custom/taskwarrior"
     ],
     "modules-center": [
         "hyprland/workspaces",  
@@ -42,6 +43,12 @@
     // Modules
     // -------------------------------------------------------------------------
 
+    "custom/taskwarrior": {
+        "format": "{}",
+        "exec": "task status:pending count",
+        "interval": 60
+    },
+    
     "battery": {
         "interval": 120,
         "states": {

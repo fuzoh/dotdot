@@ -59,6 +59,7 @@
 #battery,
 #clock,
 #cpu,
+#custom-taskwarrior,
 #custom-keyboard-layout,
 #memory,
 #mode,
@@ -171,4 +172,8 @@
 #workspaces button.urgent {
   color: #576574;
   background-color: #ee5253;
+}
+
+#custom-taskwarrior {
+  font-weight: bold;
 }
