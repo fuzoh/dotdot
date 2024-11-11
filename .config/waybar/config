@@ -10,7 +10,7 @@
     // Global configuration
     // -------------------------------------------------------------------------
 
-    "layer": "top",
+    "layer": "bottom",
 
     "position": "top",
     //"output": ["HDMI-A-1", "DP-1", "eDP-1"],
