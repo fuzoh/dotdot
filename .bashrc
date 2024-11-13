@@ -91,3 +91,6 @@ export GPG_TTY=$(tty)
 #PATH=$PATH:~/.npm-global/bin
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
+
+source /home/bastien/.config/broot/launcher/bash/br
+. "/home/bastien/.deno/env"
