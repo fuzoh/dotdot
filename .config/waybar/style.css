@@ -59,7 +59,6 @@
 #battery,
 #clock,
 #cpu,
-#custom-taskwarrior,
 #custom-keyboard-layout,
 #memory,
 #mode,
@@ -175,5 +174,17 @@
 }
 
 #custom-taskwarrior {
+  padding-left: 4px;
+  padding-right: 2px;
+}
+
+#custom-taskthisweek {
+  font-weight: bold;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+#custom-taskoverdue {
+  padding-left: 2px;
   font-weight: bold;
 }

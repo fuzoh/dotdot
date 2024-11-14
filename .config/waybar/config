@@ -22,6 +22,8 @@
     "modules-left": [
         "network",
         "custom/taskwarrior",
+        "custom/taskthisweek",
+        "custom/taskoverdue"
     ],
     "modules-center": [
         "hyprland/workspaces",  
@@ -46,7 +48,19 @@
     "custom/taskwarrior": {
         "format": "{}",
         "exec": "task status:pending count",
-        "interval": 60
+        "interval": 120
+    },
+
+    "custom/taskthisweek": {
+        "format": "{}",
+        "exec": "task due.after:yesterday and due.before:eow count",
+        "interval": 120
+    },
+
+    "custom/taskoverdue": {
+        "format": "{}",
+        "exec": "task status:overdue count",
+        "interval": 120
     },
     
     "battery": {
