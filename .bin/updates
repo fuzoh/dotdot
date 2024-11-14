@@ -24,6 +24,9 @@ volta install pnpm
 echo "### Bun update"
 bun upgrade
 
+echo "### Deno update"
+deno upgrade
+
 echo "### Flutter toolchain update"
 flutter upgrade
 
