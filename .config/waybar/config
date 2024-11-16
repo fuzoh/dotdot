@@ -53,7 +53,7 @@
 
     "custom/taskthisweek": {
         "format": "{}",
-        "exec": "task due.after:yesterday and due.before:eow count",
+        "exec": "task due.after:yesterday and due.before:eow and status:pending count",
         "interval": 120
     },
 
