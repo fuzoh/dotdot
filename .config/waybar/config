@@ -59,7 +59,7 @@
 
     "custom/taskoverdue": {
         "format": "{}",
-        "exec": "task status:overdue count",
+        "exec": "task due.before:today and status:pending count",
         "interval": 120
     },
     
