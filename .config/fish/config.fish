@@ -22,6 +22,8 @@ set -gx ELECTRON_OZONE_PLATFORM_HINT wayland
 
 set -gx GPG_TTY (tty)
 
+set -gx JAVA_HOME /usr/lib/jvm/default-jdk
+
 # Add some variables to path
 #fish_add_path -aP ~/.cargo/bini
 source "$HOME/.cargo/env.fish"
@@ -30,6 +32,7 @@ fish_add_path -aP ~/.bin
 fish_add_path -aP ~/.local/bin
 fish_add_path -aP ~/flutter/bin
 fish_add_path -aP ~/go/bin
+fish_add_path -aP "$JAVA_HOME/bin"
 
 # Start ssh agent
 fish_ssh_agent
