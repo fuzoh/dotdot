@@ -102,6 +102,22 @@ ffmpeg -i my_video.mp4 -vn -acodec copy audio.aac
 ffmpeg -i my_video.mp4 -i my_new_audio.aac -c:v copy -map 0:v:0 -map 1:a:0 video_with_audio.mp4
 ```
 
+# Installing deb packages on void linux
+
+*WARNING, you may break your system if you ignore errors... be careful*
+
+This is a last resort solution, you should favour using oficial package manager, flatpack or other native package system.
+
+We will use [xdeb](https://github.com/xdeb-org/xdeb), a script that allows to convert a .deb to an xbps template.
+
+```shell
+# Generate a template
+xdeb -Sedf <DEB_PACKAGE_NAME>.deb
+# The type the xbps-install command given by the xdeb command
+```
+
+**If xdeb gives you an error, carfully consider it to avoid breaking your system.**
+
 ## Todo
 
 ### Pass configuration

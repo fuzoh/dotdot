@@ -24,6 +24,9 @@ set -gx GPG_TTY (tty)
 
 set -gx JAVA_HOME /usr/lib/jvm/default-jdk
 
+set -gx XDEB_PKGROOT ~/.config/xdeb
+
+
 # Add some variables to path
 #fish_add_path -aP ~/.cargo/bini
 source "$HOME/.cargo/env.fish"
