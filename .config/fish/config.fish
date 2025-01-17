@@ -66,6 +66,8 @@ abbr -a ph "git push"
 abbr -a sm "git switch main && git pull"
 abbr -a sn "git switch -c"
 
+abbr -a dup "docker compose up"
+abbr -a ddown "docker compose down"
 
 if status is-interactive
     # Commands to run in interactive sessions can go here
