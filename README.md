@@ -102,7 +102,7 @@ ffmpeg -i my_video.mp4 -vn -acodec copy audio.aac
 ffmpeg -i my_video.mp4 -i my_new_audio.aac -c:v copy -map 0:v:0 -map 1:a:0 video_with_audio.mp4
 ```
 
-# Installing deb packages on void linux
+### Installing deb packages on void linux
 
 *WARNING, you may break your system if you ignore errors... be careful*
 
@@ -117,6 +117,13 @@ xdeb -Sedf <DEB_PACKAGE_NAME>.deb
 ```
 
 **If xdeb gives you an error, carfully consider it to avoid breaking your system.**
+
+### Installing satty for screenshots
+
+```sh
+git clone --branch <TAG> git@github.com:gabm/Satty.git
+PREFIX=~/.local make install
+```
 
 ## Todo
 
