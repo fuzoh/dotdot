@@ -25,17 +25,17 @@ disable-notifications = true
 
 # Font to use for text annotations
 [font]
-family = "Articulat CF"
+family = "Cartograph CF"
 style = "Bold"
 
 # Custom colours for the colour palette
 [color-palette]
 # These will be shown in the toolbar for quick selection
 palette = [
-    "#00ffff",
-    "#a52a2a",
-    "#dc143c",
-    "#ff1493",
-    "#ffd700",
-    "#008000",
+    "#ff3f34",
+    "#f53b57",
+    "#3c40c6",
+    "#05c46b",
+    "#ffd32a",
+    "#1e272e",
 ]
