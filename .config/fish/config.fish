@@ -69,6 +69,9 @@ abbr -a sn "git switch -c"
 abbr -a dup "docker compose up"
 abbr -a ddown "docker compose down"
 
+abbr -a d 'date "+%Y-%m-%d"'
+abbr -a dt 'date "+%Y-%m-%d_%H:%M"'
+
 if status is-interactive
     # Commands to run in interactive sessions can go here
     starship init fish | source # Setup shell prompt
