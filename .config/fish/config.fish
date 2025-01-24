@@ -74,6 +74,7 @@ if status is-interactive
     starship init fish | source # Setup shell prompt
     zoxide init fish | source # Zoxide for jump to cd command
     atuin init fish | source # Shell history
+    tv init fish | source # Tv autocomplete
     set fish_greeting # Remove fish greeting
     cd
 end
