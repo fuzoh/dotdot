@@ -1,0 +1,29 @@
+{
+    "workbench.startupEditor": "none",
+    "files.autoSave": "onFocusChange",
+    "editor.fontFamily": "Cartograph CF",
+    "editor.fontSize": 19,
+    "editor.fontWeight": "400",
+    "editor.lineHeight": 1.6,
+    "workbench.colorTheme": "Bluloco Light Italic",
+    "terminal.integrated.fontFamily": "Space Mono",
+    "terminal.integrated.fontSize": 18,
+    "rust-analyzer.check.command": "clippy",
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "editor.minimap.enabled": false,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "git.confirmSync": false,
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false,
+        "python": true
+    },
+    "extensions.ignoreRecommendations": true
+}
