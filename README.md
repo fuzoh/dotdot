@@ -8,6 +8,10 @@ Use `stow .` from the root folder of the cloned repo.
 
 *Maybe you will wand to use `stow . --adopt` then `git diff` to compare your dotfiles with these one.
 
+## Installing a fresh void system to use with dotfiles
+
+See [this readme](others/README.md)
+
 ## Tips and triks
 
 ### Network

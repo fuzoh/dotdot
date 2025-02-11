@@ -1,0 +1,65 @@
+# Packages for void fresh install
+# Microcode (use amd-ucode on artix)
+linux-firmware-amd
+
+# Base packages
+cronie
+ntp
+elogind
+tlp
+NetworkManager
+nfs-utils
+dbus
+linux-firmware-amd
+mesa-dri
+vulkan-loader
+mesa-vulkan-radeon
+mesa-vaapi
+mesa-vdpa
+noto-fonts-emoji
+dejavu-fonts-ttf
+alsa-utils
+pipewire
+wireplumber
+pipewire-pulse
+libjack-pipewire
+gnupg
+flatpak
+cups
+cups-filters
+gutenprint
+hplip
+foomatic-db
+cnijfilter2
+system-config-printer
+libvirt
+virt-manager
+virt-manager-tools
+qemu
+
+# Languages
+python3-devel
+ruby-devel
+openjdk
+openjdk-jre
+openjdk-doc
+php
+composer
+php-apcu
+php-gd
+php-ffi
+php-sqlite
+php-pgsql
+php-fpm
+php-intl
+php-pear
+
+# Desktop environment
+xdg-desktop-portal
+xdg-desktop-portal-gtk
+qt5-wayland
+qt6-wayland
+kwayland
+qpwgraph
+
+# Tools
