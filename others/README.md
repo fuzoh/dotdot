@@ -26,3 +26,10 @@ cp others/doas.conf /etc/doas.conf
 ```bash
 
 ```
+
+* Setup udev rule to accept thunderbold devices
+* Install xdeb
+
+### Activate runit services
+
+### Switch to mainline kernel series
