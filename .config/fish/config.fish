@@ -79,7 +79,6 @@ if status is-interactive
     zoxide init fish | source # Zoxide for jump to cd command
     atuin init fish | source # Shell history
     set fish_greeting # Remove fish greeting
-    cd
 end
 
 set -gx VOLTA_HOME "$HOME/.volta"
