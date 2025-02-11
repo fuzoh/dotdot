@@ -25,7 +25,7 @@ disable-notifications = true
 
 # Font to use for text annotations
 [font]
-family = "Cartograph CF"
+family = "SF Pro Rounded"
 style = "Bold"
 
 # Custom colours for the colour palette
