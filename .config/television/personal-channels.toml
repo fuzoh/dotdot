@@ -33,3 +33,9 @@ name = "xpackages"
 source_command = 'xbps-query -l'
 preview_command = 'xbps-query {1}'
 preview_delimiter = ' '
+
+[[cable_channel]]
+name = "flatpaks"
+source_command = 'flatpak list --columns=application'
+preview_command = 'flatpak info {}'
+preview_delimiter = ' '
