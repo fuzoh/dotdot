@@ -1,0 +1,3 @@
+#!/usr/bin/env fish
+
+rofimoji -a type --selector tofi --selector-args "--font \"SF Compact Display\" --fuzzy-match false" -r "" -s light

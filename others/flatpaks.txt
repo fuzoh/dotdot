@@ -15,6 +15,7 @@ com.jgraph.drawio.desktop
 com.rafaelmardojai.WebfontKitGenerator
 com.saivert.pwvucontrol
 com.toolstack.Folio
+de.schmidhuberj.DieBahn
 dev.geopjr.Calligraphy
 dev.geopjr.Collision
 fr.romainvigier.MetadataCleaner
