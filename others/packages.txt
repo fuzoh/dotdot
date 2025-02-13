@@ -168,4 +168,6 @@ xournalpp
 xtools
 yazi
 zoxide
-
+pandoc
+poppler
+poppler-utils
