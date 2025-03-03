@@ -26,4 +26,25 @@
         "python": true
     },
     "extensions.ignoreRecommendations": true,
+    "update.showReleaseNotes": false,
+    "github.copilot.chat.editor.temporalContext.enabled": true,
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "window.menuBarVisibility": "toggle",
+    "[typst]": {
+        "editor.formatOnSave": true,
+        "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?"
+    },
+    "[typst-code]": {
+        "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "biomejs.biome"
+    },
+    "window.customTitleBarVisibility": "auto",
+    "[markdown]": {
+        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+    },
+    "tinymist.formatterMode": "typstyle",
 }
