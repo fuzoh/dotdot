@@ -12,3 +12,14 @@ hidden = false
 [editor.soft-wrap]
 enable = true
 
+[editor.indent-guides]
+render = true
+
+[editor.statusline]
+left = [
+  "mode",
+  "spinner",
+  "version-control",
+  "file-name",
+  "file-modification-indicator",
+]
