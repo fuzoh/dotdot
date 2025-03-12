@@ -64,7 +64,7 @@
     },
     
     "battery": {
-        "interval": 120,
+        "interval": 360,
         "states": {
             "warning": 30,
             "critical": 15
@@ -107,7 +107,7 @@
     "network": {
         "interval": 120,
         "format": "{ifname} {ipaddr}",
-        "format-wifi": "{ifname} {signaldBm} {frequency} {ipaddr}",
+        "format-wifi": "{ifname} {signaldBm} {frequency} {ipaddr}/{cidr}",
         "format-ethernet": "{ifname} {ipaddr}/{cidr}"
     },
 
