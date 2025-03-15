@@ -27,14 +27,12 @@ set -gx JAVA_HOME /usr/lib/jvm/default-jdk
 
 set -gx XDEB_PKGROOT ~/.config/xdeb
 
-
 # Add some variables to path
 #fish_add_path -aP ~/.cargo/bini
 source "$HOME/.cargo/env.fish"
 fish_add_path -aP ~/.npm-global/bin
 fish_add_path -aP ~/.bin
 fish_add_path -aP ~/.local/bin
-fish_add_path -aP ~/flutter/bin
 fish_add_path -aP ~/go/bin
 fish_add_path -aP "$JAVA_HOME/bin"
 fish_add_path -aP /opt/texlive/2024/bin/x86_64-linux

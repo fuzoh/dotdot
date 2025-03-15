@@ -27,8 +27,5 @@ bun upgrade
 echo "### Deno update"
 deno upgrade
 
-echo "### Flutter toolchain update"
-flutter upgrade
-
 echo "### Flatpaks update"
 flatpak update
