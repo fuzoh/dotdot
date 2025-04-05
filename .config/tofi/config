@@ -13,7 +13,7 @@
 	# characters not in the chosen font will fail to render.
 	#
 	# Otherwise, fonts are interpreted in Pango format.	
-font = /home/bastien/.fonts/SF-Compact-Display-Medium.otf
+font = /home/bastien/.fonts/AdwaitaSans-Regular.ttf
 
 anchor = top
 width = 100%
