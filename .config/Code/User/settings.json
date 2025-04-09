@@ -5,6 +5,7 @@
     "editor.fontSize": 19,
     "editor.lineHeight": 1.6,
     "workbench.colorTheme": "GitHub Light",
+    "window.controlsStyle": "hidden",
     "terminal.integrated.fontFamily": "Iosevka",
     "editor.fontLigatures": true,
     "terminal.integrated.fontSize": 17,
