@@ -42,6 +42,7 @@ fish_ssh_agent
 
 # Some aliases
 alias ls="eza"
+alias lln="eza --long --git --all -snew"
 alias ll="eza --long --git --all"
 alias lt="eza --tree --level=2 --long --git"
 abbr -a sail "./vendor/bin/sail"
