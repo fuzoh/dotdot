@@ -36,6 +36,7 @@ fish_add_path -aP ~/.local/bin
 fish_add_path -aP ~/go/bin
 fish_add_path -aP "$JAVA_HOME/bin"
 fish_add_path -aP /opt/texlive/2024/bin/x86_64-linux
+fish_add_path -aP ~/.symfony5/bin
 
 # Start ssh agent
 fish_ssh_agent
