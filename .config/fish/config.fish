@@ -30,13 +30,13 @@ set -gx XDEB_PKGROOT ~/.config/xdeb
 # Add some variables to path
 #fish_add_path -aP ~/.cargo/bini
 source "$HOME/.cargo/env.fish"
-fish_add_path -aP ~/.npm-global/bin
 fish_add_path -aP ~/.bin
 fish_add_path -aP ~/.local/bin
 fish_add_path -aP ~/go/bin
 fish_add_path -aP "$JAVA_HOME/bin"
 fish_add_path -aP /opt/texlive/2024/bin/x86_64-linux
 fish_add_path -aP ~/.symfony5/bin
+fish_add_path -aP ~/.config/composer/vendor/bin
 
 # Start ssh agent
 fish_ssh_agent
