@@ -152,8 +152,8 @@
   border-radius: 4px;
   font-weight: bold;
   /* To compensate for the top border and still have vertical centering */
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 6px;
+  padding-right: 6px;
   color: #d2dae2;
   background-color: #1e272e;
 }
