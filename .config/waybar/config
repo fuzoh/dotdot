@@ -111,7 +111,7 @@
         "format-ethernet": "{ifname} {ipaddr}/{cidr}"
     },
 
-    "sway/mode": {
+    "hyprland/submap": {
         "format": "{}",
         "tooltip": false
     },
@@ -120,17 +120,6 @@
         "format": "{name}",
         "active-only": false,
         "all-output": false
-    },
-
-    "sway/window": {
-        "format": "{}",
-        "max-length": 120
-    },
-
-    "sway/workspaces": {
-        "all-outputs": false,
-        "disable-scroll": true,
-        "format": "{name}",
     },
 
     "backlight": {
