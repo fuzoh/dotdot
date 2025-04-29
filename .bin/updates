@@ -12,6 +12,9 @@ rustup update
 echo "### Cargo packages"
 cargo install-update --all
 
+echo '### Note update'
+fnm install 22
+
 echo "### Bun update"
 bun upgrade
 
