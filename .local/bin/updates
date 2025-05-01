@@ -14,6 +14,10 @@ cargo install-update --all
 
 echo '### Note update'
 fnm install 22
+fnm use 22
+
+echo '### PNPM update'
+pnpm self-update
 
 echo "### Bun update"
 bun upgrade
