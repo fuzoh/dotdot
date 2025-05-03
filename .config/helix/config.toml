@@ -12,8 +12,8 @@ hidden = false
 [editor.soft-wrap]
 enable = true
 
-[editor.indent-guides]
-render = true
+#[editor.indent-guides]
+#render = true
 
 [editor.statusline]
 left = [
