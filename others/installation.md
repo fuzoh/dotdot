@@ -72,8 +72,55 @@ doas xbps-install cronie
 doas ln -s /etc/sv/crond /var/service
 ```
 
+Trim, zpool is already to autotrin, let this setup in place.
 
-
+Ntp :
+```sh
+doas xbps-install ntp
+doas ln -s /etc/sv/ntpd /var/service
+```
 
 ## Dotfiles
 
+To setup this repository dotfiles :
+
+```sh
+doas xbps-install git
+# Configure your ssh key
+git clone git@github.com:fuzoh/dotdot.git
+# Install these before stowing dotfiles
+doas xbps-install bat btop dunst fish-shell foot git glow helix starship topgrade tofi Waybar zathura curl stow eza pass gitui task wireguard wireguard-tools zoxide keepassxc qt5-wayland qt6-wayland wl-clipboard cliphist polkit-gnome Thunar wtype libnotify xdg-utils
+# Create these directories
+mkdir ~/.config/{Code,bat,dunst,foot,glow,s,tessen,xdg-desktop-portal,zed,atuin,git,gtk-3.0,hypr,satty,television,tofi,waybar,zathura}
+mkdir ~/.local/bin ~/.local/share/applications
+# Launch stow one time to see conflicts
+cd dotdot
+stow .
+# Remove conflicting files then stow again
+# Check that all dotfiles are present in .config
+```
+
+Insatall some complementary tools :
+
+- [fnm](https://github.com/Schniz/fnm?tab=readme-ov-file#using-a-script-macoslinux)
+- [Go](https://go.dev/doc/install)
+- [xdeb](https://github.com/xdeb-org/xdeb?tab=readme-ov-file#usage)
+- [asdbctl](https://github.com/juliuszint/asdbctl)
+- [tessent]
+
+```sh
+cargo install atuin
+cargo install taplo-cli --locked
+cargo install tokei
+cargo install wl-screenrec
+cargo install harper-ls --locked
+cargo install markdown-oxide --locked
+```
+
+Sethup [hyprland](https://github.com/Makrennel/hyprland-void) repos, then :
+
+```sh
+doas xbps-install hyprcursor hypridle hyprland hyprland-qtutils hyprlock xdg-desktop-portal-hyprland hyprpicker
+```
+
+Setup [rosé pine](https://github.com/rose-pine/cursor) cursors. Need to generate an appropriate hyprcursor theme with utils. Also remeber to setup a overide for flatpaks to allow them to read theme.
