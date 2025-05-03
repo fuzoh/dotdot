@@ -12,8 +12,9 @@ rustup update
 echo "### Cargo packages"
 cargo install-update --all
 
-echo '### Note update'
+echo '### Node update with fnm (manually change on major)'
 fnm install 22
+fnm default 22
 fnm use 22
 
 echo '### PNPM update'
