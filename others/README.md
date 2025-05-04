@@ -27,7 +27,7 @@ cp others/doas.conf /etc/doas.conf
 
 ```
 
-* Setup udev rule to accept thunderbold devices
+* [Setup udev](https://wiki.archlinux.org/title/Thunderbolt#:~:text=plasma%2Dthunderbolt%20package-,Automatically%20connect%20any%20device,-Users%20who%20just) rule to accept thunderbold devices
 * Install xdeb
 
 ### Activate runit services

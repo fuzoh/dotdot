@@ -106,7 +106,7 @@ Insatall some complementary tools :
 - [Go](https://go.dev/doc/install)
 - [xdeb](https://github.com/xdeb-org/xdeb?tab=readme-ov-file#usage)
 - [asdbctl](https://github.com/juliuszint/asdbctl)
-- [tessent]
+- [tessen]()
 
 ```sh
 cargo install atuin
