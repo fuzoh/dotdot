@@ -18,8 +18,13 @@ fd -d1 -td . .config/ -x mkdir -p ~/{}
 ## Installing a fresh void system to use with dotfiles
 
 See [this readme](others/README.md)
+With ZFS root [here](/others/installation.md)
 
 ## Tips and triks
+
+### Cursors
+
+Themes included in these dotfiles are from [Rosé Pine](https://github.com/rose-pine/cursor).
 
 ### Network
 
