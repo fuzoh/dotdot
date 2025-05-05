@@ -1,12 +1,19 @@
 # dotdot
 
 > Personal dotfiles, actually working on [void-linux](https://voidlinux.org/).
+
 > You can apply them with [stow](https://www.gnu.org/software/stow/)
 
-Clone this repo in your home `cd && git clone <REPO_URL>`.
+Clone this repo in your home `cd && git clone https://github.com/fuzoh/dotdot`.
 Use `stow .` from the root folder of the cloned repo.
 
-*Maybe you will wand to use `stow . --adopt` then `git diff` to compare your dotfiles with these one.
+Stow will show you conflicting files, remove the ones you want to replace with a stow link or use `stow . --adopt` then `git diff` to compare your actual files with these dotfiles.
+
+Stow creates link high up in the file tree as possible, if you want to link only config files, you may want to first create the config folders :
+
+```sh
+fd -d1 -td . .config/ -x mkdir -p ~/{}
+```
 
 ## Installing a fresh void system to use with dotfiles
 
