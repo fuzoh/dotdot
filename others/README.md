@@ -29,3 +29,7 @@ gpg --import public_keys.asc
 gpg --import secret_keys.asc
 gpg --import-ownertrust trust_db.txt
 ```
+
+### Void perf tips
+
+See [themagicalmammal gist](https://gist.github.com/themagicalmammal/e443d3c5440d566f8206e5b957ab1493).
