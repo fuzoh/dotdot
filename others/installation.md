@@ -1,6 +1,8 @@
 # Void installation on ZFS root
 
-Follow the guide from [ZBM](https://docs.zfsbootmenu.org/en/latest/guides/void-linux/uefi.html#uefi) with an [hrmpf](https://github.com/leahneukirchen/hrmpf/releases) image.
+> This steps are for ZFS root, if you want to install on ext4, xfs or btrfs, use the [live installer](https://voidlinux.org/download/) then continue to [[installation#Post installation]];
+
+Follow the guide from [ZFSbootMenu](https://docs.zfsbootmenu.org/en/latest/guides/void-linux/uefi.html#uefi) with an [hrmpf](https://github.com/leahneukirchen/hrmpf/releases) image.
 
 Boot to the hrmpf image, then connect to it from ssh. This allows you to perform the installation in a convenient setup.
 
@@ -89,10 +91,10 @@ doas xbps-install git
 # Configure your ssh key
 git clone git@github.com:fuzoh/dotdot.git
 # Install these before stowing dotfiles
-doas xbps-install bat btop dunst fish-shell foot git glow helix starship topgrade tofi Waybar zathura curl stow eza pass gitui task wireguard wireguard-tools zoxide keepassxc qt5-wayland qt6-wayland wl-clipboard cliphist polkit-gnome Thunar wtype libnotify xdg-utils
+doas xbps-install bat btop dunst fish-shell foot git glow helix starship topgrade tofi Waybar zathura curl stow eza pass gitui task wireguard wireguard-tools zoxide keepassxc qt5-wayland qt6-wayland wl-clipboard cliphist polkit-gnome Thunar wtype libnotify xdg-utils fastfetch fd xtools wev vsv vdpauinfo nvtop usbmuxd tesseract-ocr tesseract-ocr-eng tesseract-ocr-fra syncthing slurp grim qpdfview qpwgraph qrencode pass imv jq hurl nwg-look
 # Create these directories
-mkdir ~/.config/{Code,bat,dunst,foot,glow,s,tessen,xdg-desktop-portal,zed,atuin,git,gtk-3.0,hypr,satty,television,tofi,waybar,zathura}
-mkdir ~/.local/bin ~/.local/share/applications
+fd -d1 -td . .config/ -x mkdir -p ~/{}
+mkdir ~/.local/bin ~/.local/share/applications ~/.local/share/icons ~/.icons
 # Launch stow one time to see conflicts
 cd dotdot
 stow .
@@ -106,7 +108,7 @@ Insatall some complementary tools :
 - [Go](https://go.dev/doc/install)
 - [xdeb](https://github.com/xdeb-org/xdeb?tab=readme-ov-file#usage)
 - [asdbctl](https://github.com/juliuszint/asdbctl)
-- [tessen]()
+- [tessen](https://github.com/ayushnix/tessen)
 
 ```sh
 cargo install atuin
