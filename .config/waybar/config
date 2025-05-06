@@ -17,7 +17,7 @@
     //"output": ["DP-1", "eDP-1"],
 
     // If height property would be not present, it'd be calculated dynamically
-    "height": 26,
+    "height": 22,
 
     "modules-left": [
         "network",

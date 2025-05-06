@@ -17,7 +17,7 @@ font = /home/bastien/.fonts/AdwaitaSans-Regular.ttf
 
 anchor = top
 width = 100%
-height = 26
+height = 22
 horizontal = true
 font-size = 12
 prompt-text = ""
@@ -29,7 +29,7 @@ selection-color = #FFFFFF
 default-result-color = #AAAAAA
 min-input-width = 100
 result-spacing = 15
-padding-top = 4
+padding-top = 1
 padding-bottom = 0
 padding-left = 4
 padding-right = 4
