@@ -30,6 +30,10 @@ gpg --import secret_keys.asc
 gpg --import-ownertrust trust_db.txt
 ```
 
+### Transfer zoxide db
+
+Save the `~/.local/share/zoxide/db.zo` file, then put it back on your new computer.
+
 ### Void perf tips
 
 See [themagicalmammal gist](https://gist.github.com/themagicalmammal/e443d3c5440d566f8206e5b957ab1493).
