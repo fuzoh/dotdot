@@ -1,0 +1,21 @@
+#!/usr/bin/env fish
+
+#pkill wl-screenrec && exit
+
+# Get datetime
+set date_file (date "+%Y-%m-%d_%H:%M:%S")
+
+# Path to save
+set path_file "$HOME/Videos/"
+
+set display (hyprctl monitors all -j | jq -r '.[] | "\(.name)"' | tofi)
+
+set codec (echo "avc
+av1" | tofi)
+
+set postfix_file "_"$display"_"$codec"_opus.mp4"
+
+set FILE_NAME $path_file$date_file$postfix_file
+
+# Start recording
+wl-screenrec -o $display --codec $codec --audio --low-power off --audio-codec opus --filename "$FILE_NAME"
