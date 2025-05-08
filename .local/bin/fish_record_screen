@@ -10,8 +10,9 @@ set path_file "$HOME/Videos/"
 
 set display (hyprctl monitors all -j | jq -r '.[] | "\(.name)"' | tofi)
 
-set codec (echo "avc
-av1" | tofi)
+set codec (echo "av1
+avc
+hevc" | tofi)
 
 set postfix_file "_"$display"_"$codec"_opus.mp4"
 
