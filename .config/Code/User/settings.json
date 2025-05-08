@@ -51,4 +51,5 @@
     },
     "tinymist.formatterMode": "typstyle",
     "git.replaceTagsWhenPull": true,
+    "explorer.confirmPasteNative": false,
 }
