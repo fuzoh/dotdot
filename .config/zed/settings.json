@@ -9,9 +9,9 @@
 {
   "edit_predictions": {
     "mode": "subtle",
-    "enabled_in_assistant": false
+    "enabled_in_text_threads": false
   },
-  "assistant": {
+  "agent": {
     "default_model": {
       "provider": "copilot_chat",
       "model": "claude-3-7-sonnet"
