@@ -149,7 +149,7 @@
         "format-muted": "⏹",
         "on-click": "flatpak run com.saivert.pwvucontrol",
         "max-volume": 100,
-        //"scroll-step": 0.2
+        "scroll-step": 0.5
     },
 
     "temperature": {
