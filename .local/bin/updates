@@ -10,7 +10,7 @@ echo "### Rustup tooling"
 rustup update
 
 echo "### Cargo packages"
-cargo install-update --all
+cargo install-update --all --locked
 
 echo '### Node update with fnm (manually change on major)'
 fnm install 22
