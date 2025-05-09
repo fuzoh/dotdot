@@ -8,7 +8,7 @@ set date_file (date "+%Y-%m-%d_%H:%M:%S")
 # Path to save
 set path_file "$HOME/Videos/"
 
-set display (hyprctl monitors all -j | jq -r '.[] | "\(.name)"' | tofi)
+set display (hyprctl monitors all -j | jq -r 'reverse | .[] | "\(.name)"' | tofi)
 
 set codec (echo "av1
 avc
