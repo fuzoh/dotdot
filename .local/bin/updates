@@ -26,5 +26,8 @@ bun upgrade
 echo "### Deno update"
 deno upgrade
 
+echo "### Uv update"
+uv self update
+
 echo "### Flatpaks update"
 flatpak update
