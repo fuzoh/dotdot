@@ -126,3 +126,5 @@ doas xbps-install hyprcursor hypridle hyprland hyprland-qtutils hyprlock xdg-des
 ```
 
 Setup [rosé pine](https://github.com/rose-pine/cursor) cursors. Need to generate an appropriate hyprcursor theme with utils. Also remeber to setup a overide for flatpaks to allow them to read theme.
+
+Quick remove unnecessary agetty services : `doas rm -f /var/service/agetty-tty{3,4,5,6}`.
