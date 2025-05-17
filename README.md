@@ -141,6 +141,11 @@ git clone --branch <TAG> git@github.com:gabm/Satty.git
 PREFIX=~/.local make install
 ```
 
+### Color profiles
+
+`icc` color profiles must be put in `~/.local/share/color/icc`.
+Profiles can be downloaded from eci consortium site.
+
 ## Todo
 
 ### Pass configuration
