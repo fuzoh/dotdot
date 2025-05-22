@@ -6,7 +6,7 @@
     "editor.lineHeight": 1.6,
     "workbench.colorTheme": "GitHub Light",
     "window.controlsStyle": "hidden",
-    "terminal.integrated.fontFamily": "Iosevka",
+    "terminal.integrated.fontFamily": "Iosevka Fixed",
     "editor.fontLigatures": true,
     "terminal.integrated.fontSize": 17,
     "rust-analyzer.check.command": "clippy",
@@ -52,4 +52,5 @@
     "tinymist.formatterMode": "typstyle",
     "git.replaceTagsWhenPull": true,
     "explorer.confirmPasteNative": false,
+    "editor.formatOnSave": true,
 }
