@@ -44,6 +44,10 @@ alias ls="eza"
 alias lln="eza --long --git --all -snew"
 alias ll="eza --long --git --all"
 alias lt="eza --tree --level=2 --long --git"
+alias cat="bat"
+function copy
+    bat $argv | wl-copy
+end
 # Special alias for code
 function code --wraps /usr/share/code/code
     /usr/share/code/code --password-store="gnome-libsecret" $argv & disown
