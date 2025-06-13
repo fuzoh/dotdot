@@ -36,7 +36,7 @@ app_id = swayimg
 ################################################################################
 [viewer]
 # Window background color (RGBA)
-window = #00000000
+window = #000000ff
 # Background for transparent images (grid/RGBA)
 transparency = grid
 # Default image scale (optimal/width/height/fit/fill/real)
@@ -108,9 +108,9 @@ fsmon = yes
 # Font name
 name = monospace
 # Font size (pt)
-size = 14
+size = 12
 # Font color (RGBA)
-color = #ccccccff
+color = #ddddddff
 # Shadow color (RGBA)
 shadow = #000000d0
 # Background color (RGBA)
@@ -123,7 +123,7 @@ background = #00000000
 # Show on startup (yes/no)
 show = yes
 # Timeout to hide info (seconds, 0 to always show)
-info_timeout = 10
+info_timeout = 8
 # Timeout to hide status message (seconds)
 status_timeout = 3
 
