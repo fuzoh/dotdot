@@ -1,0 +1,8 @@
+#!/usr/bin/env fish
+
+set date_file (date "+%Y-%m-%d_%H:%M:%S")
+set name "_merged.pdf"
+
+set file_name $date_file$name
+
+qpdf --empty --pages $argv -- $file_name
