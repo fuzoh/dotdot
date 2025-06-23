@@ -1,0 +1,9 @@
+#!/usr/bin/env fish
+set suffix _min
+
+for i in $argv
+    set basename (path basename $i --no-extension)
+    set extension (path extension $i)
+
+    magick $i -quality 70% -resize 1800x1800 $basename$suffix$extension
+end
