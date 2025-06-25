@@ -1,0 +1,9 @@
+#!/usr/bin/env fish
+
+loginctl lock-session
+
+cliphist wipe
+
+atuin history prune
+
+echo all | history delete -p "ansible-vault encrypt_string"
