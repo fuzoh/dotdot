@@ -91,7 +91,7 @@ doas xbps-install git
 # Configure your ssh key
 git clone git@github.com:fuzoh/dotdot.git
 # Install these before stowing dotfiles
-doas xbps-install bat btop dunst fish-shell foot git glow helix starship topgrade tofi Waybar zathura curl stow eza pass gitui task wireguard wireguard-tools zoxide keepassxc qt5-wayland qt6-wayland wl-clipboard cliphist polkit-gnome Thunar wtype libnotify xdg-utils fastfetch fd xtools wev vsv vdpauinfo nvtop usbmuxd tesseract-ocr tesseract-ocr-eng tesseract-ocr-fra syncthing slurp grim qpdfview qpwgraph qrencode pass imv jq hurl nwg-look
+doas xbps-install bat btop dunst fish-shell foot git glow helix starship topgrade tofi Waybar zathura curl stow eza pass gitui task wireguard wireguard-tools zoxide keepassxc qt5-wayland qt6-wayland wl-clipboard cliphist polkit-gnome Thunar wtype libnotify xdg-utils fastfetch fd xtools wev vsv vdpauinfo nvtop usbmuxd tesseract-ocr tesseract-ocr-eng tesseract-ocr-fra syncthing slurp grim qpdfview qpwgraph qrencode pass imv jq hurl nwg-look jpegoptim qpdf poppler ImageMagick
 # Create these directories
 fd -d1 -td . .config/ -x mkdir -p ~/{}
 mkdir ~/.local/bin ~/.local/share/applications ~/.local/share/icons ~/.icons
