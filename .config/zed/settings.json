@@ -7,18 +7,21 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "features": {
+    "edit_prediction_provider": "copilot"
+  },
   "edit_predictions": {
     "mode": "subtle",
+    "copilot": {
+      "proxy": null,
+      "proxy_no_verify": null
+    },
     "enabled_in_text_threads": false
   },
   "agent": {
     "default_model": {
       "provider": "copilot_chat",
       "model": "gpt-4.1"
-    },
-    "editor_model": {
-      "provider": "copilot_chat",
-      "model": "claude-3-7-sonnet"
     },
     "version": "2"
   },
@@ -43,6 +46,9 @@
     }
   },
   "languages": {
+    "YAML": {
+      "show_edit_predictions": false
+    },
     "TypeScript": {
       "show_edit_predictions": true
     },

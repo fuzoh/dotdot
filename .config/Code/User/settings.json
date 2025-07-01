@@ -15,19 +15,25 @@
     "editor.minimap.enabled": false,
     "diffEditor.ignoreTrimWhitespace": false,
     "git.confirmSync": false,
-    "editor.rulers": [80, 100],
+    "keyboard.dispatch": "keyCode",
+    "editor.rulers": [
+        80,
+        100
+    ],
     "editor.wordWrap": "on",
     "notebook.cellToolbarLocation": {
         "default": "right",
         "jupyter-notebook": "left"
     },
     "github.copilot.enable": {
-        "*": false,
+        "*": true,
         "plaintext": false,
         "markdown": false,
         "scminput": false,
         "python": true,
-        "rust": true
+        "rust": true,
+        "typst": false,
+        "json": false
     },
     "extensions.ignoreRecommendations": true,
     "update.showReleaseNotes": false,
@@ -53,4 +59,8 @@
     "git.replaceTagsWhenPull": true,
     "explorer.confirmPasteNative": false,
     "editor.formatOnSave": true,
+    "ltex.additionalRules.languageModel": "fr",
+    "ltex.additionalRules.motherTongue": "fr",
+    "geminicodeassist.inlineSuggestions.enableAuto": false,
+    "git.blame.editorDecoration.enabled": true,
 }
