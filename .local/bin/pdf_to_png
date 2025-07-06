@@ -1,0 +1,9 @@
+#!/usr/bin/env fish
+
+for i in $argv
+    set basename (path basename $i --no-extension)
+    set extension .png
+
+    inkscape $i -z --export-dpi=300 --export-area-drawing --export-png=$basename$extension
+
+end
