@@ -13,5 +13,3 @@ env = { BAT_THEME = "Catppuccin Mocha" }
 [ui]
 preview_panel = { "size" = 70, "scrollbar" = true }
 
-[keybindings]
-hortcut = "f1"

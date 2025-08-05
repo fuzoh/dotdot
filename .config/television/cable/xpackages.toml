@@ -1,0 +1,14 @@
+[metadata]
+name = "xpackages"
+description = "A channel to see xbps packages"
+requirements = ["xbps-query"]
+
+[source]
+command = "xbps-query -l"
+
+[preview]
+command = "xbps-query {1}"
+
+[ui]
+preview_panel = { "size" = 70, "scrollbar" = true }
+
