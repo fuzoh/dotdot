@@ -1,0 +1,9 @@
+#!/usr/bin/env fish
+
+set extension ".jpg"
+
+for i in $argv
+    set basename (path basename $i --no-extension)
+
+    magick $i $basename$extension
+end
