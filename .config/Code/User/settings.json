@@ -7,7 +7,7 @@
     "workbench.colorTheme": "GitHub Light",
     "window.controlsStyle": "hidden",
     "terminal.integrated.fontFamily": "Iosevka Fixed",
-    "editor.fontLigatures": true,
+    "editor.fontLigatures": false,
     "terminal.integrated.fontSize": 17,
     "rust-analyzer.check.command": "clippy",
     "explorer.confirmDragAndDrop": false,
