@@ -21,9 +21,8 @@
   "agent": {
     "default_model": {
       "provider": "copilot_chat",
-      "model": "gpt-4.1"
-    },
-    "version": "2"
+      "model": "claude-sonnet-4"
+    }
   },
   "unstable.ui_density": "compact",
   "show_edit_predictions": true,
@@ -42,6 +41,12 @@
         "problems": {
           "shortenToSingleLine": true
         }
+      }
+    },
+    "tinymist": {
+      "settings": {
+        "exportPdf": "onSave",
+        "outputPath": "$root/$dir/$name"
       }
     }
   },

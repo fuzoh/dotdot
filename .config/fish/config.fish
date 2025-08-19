@@ -81,11 +81,14 @@ abbr -a ddown "docker compose down"
 abbr -a d 'date "+%Y-%m-%d"'
 abbr -a dt 'date "+%Y-%m-%d_%H:%M"'
 
+abbr -a i 'doas xbps-install'
+
 if status is-interactive
     # Commands to run in interactive sessions can go here
     starship init fish | source # Setup shell prompt
     atuin init fish | source # Shell history
     zoxide init fish | source # Zoxide for jump to cd command
+    # fzf --fish | source
     set fish_greeting # Remove fish greeting
 end
 

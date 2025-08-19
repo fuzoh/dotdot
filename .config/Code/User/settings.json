@@ -32,8 +32,9 @@
         "scminput": false,
         "python": true,
         "rust": true,
-        "typst": false,
-        "json": false
+        "typst": true,
+        "json": false,
+        "shellscript": false
     },
     "extensions.ignoreRecommendations": true,
     "update.showReleaseNotes": false,
@@ -63,4 +64,5 @@
     "ltex.additionalRules.motherTongue": "fr",
     "geminicodeassist.inlineSuggestions.enableAuto": false,
     "git.blame.editorDecoration.enabled": true,
+    "github.copilot.nextEditSuggestions.enabled": true,
 }
