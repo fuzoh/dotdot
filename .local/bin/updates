@@ -12,6 +12,9 @@ rustup update
 echo "### Cargo packages"
 cargo install-update --all --locked
 
+echo "### Go packages"
+gup update
+
 echo '### Node update with fnm (manually change on major)'
 fnm install 24
 fnm default 24
