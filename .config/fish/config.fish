@@ -86,10 +86,10 @@ abbr -a i 'doas xbps-install'
 if status is-interactive
     # Commands to run in interactive sessions can go here
     starship init fish | source # Setup shell prompt
-    atuin init fish | source # Shell history
     zoxide init fish | source # Zoxide for jump to cd command
     # fzf --fish | source
-    set fish_greeting # Remove fish greeting
+    atuin init fish | source # Shell history
+    set -g fish_greeting # Remove fish greeting
 end
 
 # pnpm
