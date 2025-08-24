@@ -1,0 +1,14 @@
+[metadata]
+name = "xp"
+description = "XBPS packages"
+requirements = ["xbps-query"]
+
+[source]
+command = "xbps-query -l"
+
+[preview]
+command = "xbps-query {1}"
+
+[ui]
+preview_panel = { "size" = 60, "scrollbar" = true }
+
