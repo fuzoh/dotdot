@@ -86,6 +86,10 @@
   font-weight: bold;
 }
 
+#battery.charging {
+  font-weight: bold;
+}
+
 #clock {
   font-weight: bold;
 }
