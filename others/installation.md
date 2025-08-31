@@ -53,7 +53,7 @@ Setup `doas` :
 
 ```sh
 xbps-install opendoas helix
-usermod -aG wheel toto
+usermod -aG wheel toto dialout
 cat << EOF >> /etc/doas.conf
 permit persist :wheel
 permit nopass keepenv root

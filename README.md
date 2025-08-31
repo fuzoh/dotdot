@@ -12,7 +12,14 @@ Stow will show you conflicting files, remove the ones you want to replace with a
 Stow creates link high up in the file tree as possible, if you want to link only config files, you may want to first create the config folders :
 
 ```sh
+cd dotdot # Folder with the freshly cloned repo
+# Create all folders
 fd -d1 -td . .config/ -x mkdir -p ~/{}
+mkdir -p ~/.local/bin
+mkdir -p ~/.local/share/icons
+
+# Link the dotfiles
+stow .
 ```
 
 ## Installing a fresh void system to use with dotfiles
