@@ -28,13 +28,15 @@
     "github.copilot.enable": {
         "*": true,
         "plaintext": false,
-        "markdown": false,
+        "markdown": true,
         "scminput": false,
         "python": true,
         "rust": true,
         "typst": true,
         "json": false,
-        "shellscript": false
+        "shellscript": false,
+        "css": false,
+        "html": false
     },
     "extensions.ignoreRecommendations": true,
     "update.showReleaseNotes": false,
@@ -65,4 +67,5 @@
     "geminicodeassist.inlineSuggestions.enableAuto": false,
     "git.blame.editorDecoration.enabled": true,
     "github.copilot.nextEditSuggestions.enabled": true,
+    "editor.mouseWheelZoom": true,
 }
