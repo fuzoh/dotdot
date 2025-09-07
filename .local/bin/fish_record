@@ -1,0 +1,24 @@
+#!/usr/bin/env fish
+
+# Temporary script with wf-recorder, until wl works again
+#pkill wl-screenrec && exit
+
+# Get datetime
+set date_file (date "+%Y-%m-%d_%H:%M:%S")
+
+# Path to save
+set path_file "$HOME/Videos/"
+
+set display (hyprctl monitors all -j | jq -r 'reverse | .[] | "\(.name)"' | tofi)
+
+#set codec (echo "av1
+#avc
+#hevc" | tofi)
+
+set postfix_file "_"$display"_av1_opus.mp4"
+
+set FILE_NAME $path_file$date_file$postfix_file
+
+# Start recording
+#wl-screenrec -o $display --codec $codec --audio --low-power off --audio-codec opus --filename "$FILE_NAME"
+wf-recorder -o $display -C libopus --audio -c libsvtav1 -r 25 --file "$FILE_NAME"
