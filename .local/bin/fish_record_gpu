@@ -1,0 +1,27 @@
+#!/usr/bin/env fish
+
+# Temporary script with wf-recorder, until wl works again
+#pkill wl-screenrec && exit
+
+# Get datetime
+set date_file (date "+%Y-%m-%d_%H:%M:%S")
+
+# Path to save
+set path_file "$HOME/Videos/"
+
+set display (hyprctl monitors all -j | jq -r 'reverse | .[] | "\(.name)"' | tofi)
+
+set codec (echo "av1
+h264
+hevc
+hevc_10bit
+av1_10bit" | tofi)
+
+set postfix_file "_"$display"_"$codec"_opus.mp4"
+
+set FILE_NAME $path_file$date_file$postfix_file
+
+# Start recording
+#wl-screenrec -o $display --codec $codec --audio --low-power off --audio-codec opus --filename "$FILE_NAME"
+#wf-recorder -o $display -C libopus --audio -c libsvtav1 -r 25 --file "$FILE_NAME"
+flatpak run --command=gpu-screen-recorder com.dec05eba.gpu_screen_recorder -w $display -c mp4 -k av1 -ac opus -f 30 -cursor yes -cr full -encoder gpu -o /home/bastien/Videos/Video_2025-09-09_11-36-07.mp4 -q very_high -a device:default_input
