@@ -2,7 +2,7 @@
 
 loginctl lock-session
 
-cliphist wipe
+clipvault clear
 
 atuin history prune
 

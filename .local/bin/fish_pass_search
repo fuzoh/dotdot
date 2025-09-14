@@ -4,6 +4,10 @@ set pass_name (fd -e gpg . --base-directory ~/.password-store --format {.} | tof
 
 if test -n "$pass_name"
 
-    pass show "$pass_name" | wl-copy --trim-newline && hyprctl dispatch sendshortcut "CTRL,V,"
+    pass show "$pass_name" | wl-copy --trim-newline
+
+    hyprctl dispatch sendshortcut "CTRL,V,"
+
+    clipvault delete --index 0
 
 end
