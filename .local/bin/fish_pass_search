@@ -1,0 +1,9 @@
+#!/usr/bin/env fish
+
+set pass_name (fd -e gpg . --base-directory ~/.password-store --format {.} | tofi --fuzzy-match true)
+
+if test -n "$pass_name"
+
+    pass show "$pass_name" | wl-copy --trim-newline && hyprctl dispatch sendshortcut "CTRL,V,"
+
+end
