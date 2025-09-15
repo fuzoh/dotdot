@@ -1,0 +1,11 @@
+#!/usr/bin/env fish
+
+set names (names 14 | tofi --fuzzy-match true)
+
+if test -n "$names"
+
+    echo "$names" | xargs wl-copy
+
+    hyprctl dispatch sendshortcut "CTRL,V,"
+
+end

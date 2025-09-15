@@ -1,0 +1,5 @@
+#!/usr/bin/env fish
+
+date "+%Y-%m-%d_%H:%M" | xargs wl-copy
+
+hyprctl dispatch sendshortcut "CTRL,V,"

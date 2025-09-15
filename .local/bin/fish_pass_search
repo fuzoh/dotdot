@@ -8,6 +8,8 @@ if test -n "$pass_name"
 
     hyprctl dispatch sendshortcut "CTRL,V,"
 
+    sleep .1
+
     clipvault delete --index 0
 
 end
