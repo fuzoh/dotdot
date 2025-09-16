@@ -1,5 +1,11 @@
 #!/usr/bin/env fish
 
-clipvault list | tofi --fuzzy-match true | clipvault get | wl-copy
+set to_paste (clipvault list | tofi --fuzzy-match true)
 
-hyprctl dispatch sendshortcut "CTRL,V,"
+if test -n "$to_paste"
+
+    echo $to_paste | clipvault get | wl-copy
+
+    hyprctl dispatch sendshortcut "CTRL,V,"
+
+end
