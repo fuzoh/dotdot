@@ -42,7 +42,7 @@
     "update.showReleaseNotes": false,
     "github.copilot.chat.editor.temporalContext.enabled": true,
     "[html]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "vscode.html-language-features"
     },
     "[typst]": {
         "editor.formatOnSave": true,
@@ -64,8 +64,9 @@
     "editor.formatOnSave": true,
     "ltex.additionalRules.languageModel": "fr",
     "ltex.additionalRules.motherTongue": "fr",
-    "geminicodeassist.inlineSuggestions.enableAuto": false,
     "git.blame.editorDecoration.enabled": true,
     "github.copilot.nextEditSuggestions.enabled": true,
     "editor.mouseWheelZoom": true,
+    "redhat.telemetry.enabled": false,
+    "docker.extension.enableComposeLanguageServer": true,
 }
