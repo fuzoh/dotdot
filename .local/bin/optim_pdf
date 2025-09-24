@@ -1,0 +1,9 @@
+#!/usr/bin/env fish
+set suffix _min
+
+for i in $argv
+    set basename (path basename $i --no-extension)
+    set extension (path extension $i)
+
+    gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile=$basename$suffix$extension $i
+end

@@ -158,3 +158,11 @@ Profiles can be downloaded from eci consortium site.
 ### Pass configuration
 
 ### Gpg backup, export, and restore
+
+### File encryprion
+
+```sh
+tar -I zstd -cf - ./folder_to_compress | rage -R ~/your-public-key > final_encrypted_file.tar.zst.age
+
+rage -d -i ~/private_key archive_file.tar.zst.age | tar -I zstd -xf -
+```
