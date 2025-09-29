@@ -73,7 +73,7 @@ abbr -a pl "git pull"
 abbr -a ph "git push"
 abbr -a sm "git switch main && git pull"
 abbr -a sn "git switch -c"
-abbr -a gl "git log --graph --decorate --oneline"
+abbr -a gl "git log --graph --decorate --oneline --all"
 
 abbr -a dup "docker compose up"
 abbr -a ddown "docker compose down"
