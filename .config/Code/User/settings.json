@@ -4,9 +4,9 @@
     "editor.fontFamily": "Iosevka",
     "editor.fontSize": 19,
     "editor.lineHeight": 1.6,
-    "workbench.colorTheme": "GitHub Light",
     "window.controlsStyle": "hidden",
     "terminal.integrated.fontFamily": "Iosevka Fixed",
+    "notebook.markup.fontFamily": "Adwaita Sans",
     "editor.fontLigatures": false,
     "terminal.integrated.fontSize": 17,
     "rust-analyzer.check.command": "clippy",
@@ -15,6 +15,7 @@
     "editor.minimap.enabled": false,
     "diffEditor.ignoreTrimWhitespace": false,
     "git.confirmSync": false,
+    "notebook.markup.fontSize": 16,
     "keyboard.dispatch": "keyCode",
     "editor.rulers": [
         80,
@@ -26,7 +27,7 @@
         "jupyter-notebook": "left"
     },
     "github.copilot.enable": {
-        "*": true,
+        "*": false,
         "plaintext": false,
         "markdown": true,
         "scminput": false,
@@ -51,6 +52,10 @@
     "[typst-code]": {
         "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?"
     },
+    "[python]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "charliermarsh.ruff"
+    },
     "[typescript]": {
         "editor.defaultFormatter": "biomejs.biome"
     },
@@ -69,4 +74,19 @@
     "editor.mouseWheelZoom": true,
     "redhat.telemetry.enabled": false,
     "docker.extension.enableComposeLanguageServer": true,
+    "[dockercompose]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.autoIndent": "advanced",
+        "editor.quickSuggestions": {
+            "other": true,
+            "comments": false,
+            "strings": true
+        },
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "[github-actions-workflow]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "workbench.colorTheme": "GitHub Light",
 }
