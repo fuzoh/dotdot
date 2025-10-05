@@ -1,12 +1,30 @@
 #!/usr/bin/env fish
 
+# Check if the main monitor (laptop one) is currently mirrored
 set is_mirror (hyprctl monitors all -j | jq -r '.[0].mirrorOf')
 
-if test "$is_mirror" = none
-    hyprctl keyword monitor HDMI-A-1,3840x2160,0x0,3
-    hyprctl keyword monitor eDP-1, preferred, auto, 1, mirror, HDMI-A-1
+# Get all other displays
+set available_displays (hyprctl monitors all -j | jq -r '.[1:] | .[] | "\(.name) - \(.availableModes[0])"')
+
+# If there is available displays
+if test -n "$available_displays"
+
+    # TODO: ask user wich monitor to mirror, currently only HDMI one
+    # There is available display for mirroring
+    if test "$is_mirror" = none
+        notify-send Mirroring "starting mirroring" -t 1000
+        hyprctl keyword monitor HDMI-A-1,3840x2160,0x0,3
+        hyprctl keyword monitor eDP-1, preferred, auto, 1, mirror, HDMI-A-1
+    else
+        notifiy-send Mirroring "terminating mirroring" -t 1000
+        hyprctl keyword monitor eDP-1, disable
+        sleep 1
+        hyprctl reload
+        sleep 1
+        killall waybar && waybar
+    end
+
 else
-    hyprctl keyword monitor eDP-1, disable
-    sleep 1
-    hyprctl reload
+    # No available displays
+    notify-send Mirroring "no available displays for mirroring" -t 1000
 end
