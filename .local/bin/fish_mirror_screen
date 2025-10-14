@@ -20,7 +20,7 @@ if test -n "$available_displays"
         hyprctl keyword monitor eDP-1, disable
         sleep 1
         hyprctl reload
-        sleep 1
+        sleep 3
         killall waybar && waybar
     end
 

@@ -1,0 +1,9 @@
+#!/usr/bin/env fish
+
+set needle (cat /dev/null | tofi --prompt-text "Goto : ")
+
+if test -n "$needle"
+
+    thunar (zoxide query "$needle")
+
+end
