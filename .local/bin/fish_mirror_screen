@@ -4,9 +4,9 @@ function disable_mirroring
 
     notifiy-send Mirroring "terminating mirroring" -t 1000
     hyprctl keyword monitor eDP-1, disable
-    sleep 1
+    sleep .5
     hyprctl reload
-    sleep 3
+    sleep 1
     killall waybar && waybar
 
 end
