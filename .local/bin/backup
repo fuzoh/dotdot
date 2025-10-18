@@ -1,0 +1,106 @@
+#!/bin/bash
+# A script to backup, compress, encrypt, and upload folders to multiple rclone remotes.
+
+# --- Configuration ---
+# Exit script on any error, on unset variables, and prevent errors in pipelines from being masked.
+set -euo pipefail
+
+BACKUP_DIRS=~/Documents/Images
+REMOTE_DEST=/backup
+RCLONE_REMOTES=google_drive
+AGE_PUBLIC_KEY_PATH=~/.ssh/age-key.pub
+
+# --- Pre-flight Checks ---
+
+# 1. Check for required environment variables.
+#    - BACKUP_DIRS: Space-separated list of directories to back up (e.g., "/home/user/docs /home/user/photos").
+#    - REMOTE_DEST: The destination directory on the remote storage (e.g., "backups/server1").
+#    - RCLONE_REMOTES: Space-separated list of rclone remotes (e.g., "gdrive b2").
+#    - AGE_PUBLIC_KEY_PATH: Absolute path to the age public key file (e.g., "/home/user/.keys/age.pub").
+#    - BACKUPS_TO_KEEP: The number of recent backups to keep on the remote. Defaults to 3.
+: "${BACKUP_DIRS:?Error: BACKUP_DIRS environment variable is not set.}"
+: "${REMOTE_DEST:?Error: REMOTE_DEST environment variable is not set.}"
+: "${RCLONE_REMOTES:?Error: RCLONE_REMOTES environment variable is not set.}"
+: "${AGE_PUBLIC_KEY_PATH:?Error: AGE_PUBLIC_KEY_PATH environment variable is not set.}"
+BACKUPS_TO_KEEP=${BACKUPS_TO_KEEP:-3}
+
+
+# 2. Check for required commands.
+for cmd in tar zstd age rclone; do
+    if ! command -v "$cmd" &> /dev/null; then
+        echo "Error: Required command '$cmd' is not installed." >&2
+        exit 1
+    fi
+done
+
+# 3. Check if the age public key file exists.
+if [ ! -f "$AGE_PUBLIC_KEY_PATH" ]; then
+    echo "Error: Age public key not found at '$AGE_PUBLIC_KEY_PATH'" >&2
+    exit 1
+fi
+
+# --- Main Logic ---
+
+echo "Starting backup process at $(date)"
+
+# Loop through each directory specified in the BACKUP_DIRS variable.
+for dir in $BACKUP_DIRS; do
+    # Ensure the directory exists and is actually a directory.
+    if [ ! -d "$dir" ]; then
+        echo "Warning: '$dir' is not a valid directory. Skipping."
+        continue
+    fi
+
+    # Sanitize and get the base name of the directory for the archive file.
+    dir_path=$(realpath "$dir")
+    dir_name=$(basename "$dir_path")
+    timestamp=$(date +"%Y%m%d-%H%M%S")
+    archive_name="${dir_name}-${timestamp}.tar.zst.age"
+
+    echo "--------------------------------------------------"
+    echo "Processing backup for: $dir_path"
+    echo "Archive will be named: $archive_name"
+
+    # Create a compressed, and encrypted archive.
+    # - tar -c: create archive
+    # - -I 'zstd -T0 -10': pipe through zstd with multi-threading and compression level 10
+    # - -C: change to the parent directory of the target to avoid storing absolute paths
+    # - -f -: write archive to standard output
+    # - age -R: encrypt with the specified recipients file (public key)
+    echo "Creating, compressing, and encrypting archive..."
+    tar -I 'zstd -T0 -10' -C "$(dirname "$dir_path")" -cf - "$dir_name" | age -R "$AGE_PUBLIC_KEY_PATH" > "$archive_name"
+    echo "Local encrypted archive created successfully."
+
+    # Loop through each rclone remote and upload the archive.
+    for remote in $RCLONE_REMOTES; do
+        remote_path="${remote}:${REMOTE_DEST}"
+        echo "--> Uploading '$archive_name' to '$remote_path'"
+
+        # Copy the file to the remote.
+        rclone copy "$archive_name" "$remote_path" --progress
+        echo "--> Upload to '$remote_path' complete."
+
+        # Clean up old backups on the remote.
+        echo "--> Cleaning up old backups for '$dir_name' on '$remote_path'..."
+        # List all backups for the current directory, sort them, and identify the ones to delete.
+        backups_to_delete=$(rclone lsf "$remote_path" | grep "^${dir_name}-" | sort | head -n -"${BACKUPS_TO_KEEP}")
+
+        if [[ -n "$backups_to_delete" ]]; then
+            echo "$backups_to_delete" | while read -r backup_file; do
+                echo "    - Deleting old backup: $backup_file"
+                rclone deletefile "${remote_path}/${backup_file}"
+            done
+            echo "--> Cleanup on '$remote_path' finished."
+        else
+            echo "--> No old backups to delete on '$remote_path'."
+        fi
+    done
+
+    # Remove the local archive file after successful uploads.
+    echo "Removing local archive: $archive_name"
+    rm "$archive_name"
+    echo "--------------------------------------------------"
+done
+
+echo "Backup process finished at $(date)"
+
