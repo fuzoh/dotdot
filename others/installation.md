@@ -91,7 +91,7 @@ doas xbps-install git
 # Configure your ssh key
 git clone git@github.com:fuzoh/dotdot.git
 # Install these before stowing dotfiles
-doas xbps-install bat btop dunst fish-shell foot git glow helix starship topgrade tofi Waybar zathura curl stow eza pass gitui task wireguard wireguard-tools zoxide keepassxc qt5-wayland qt6-wayland wl-clipboard cliphist polkit-gnome Thunar wtype libnotify xdg-utils fastfetch fd xtools wev vsv vdpauinfo nvtop usbmuxd tesseract-ocr tesseract-ocr-eng tesseract-ocr-fra syncthing slurp grim qpdfview qpwgraph qrencode pass imv jq hurl nwg-look jpegoptim qpdf poppler ImageMagick
+doas xbps-install bat btop dunst fish-shell foot git glow helix starship topgrade tofi Waybar zathura curl stow eza pass gitui task wireguard wireguard-tools zoxide keepassxc qt5-wayland qt6-wayland wl-clipboard polkit-gnome Thunar wtype libnotify xdg-utils fastfetch fd xtools wev vsv vdpauinfo nvtop usbmuxd tesseract-ocr tesseract-ocr-eng tesseract-ocr-fra syncthing slurp grim qpdfview qpwgraph qrencode pass imv jq hurl nwg-look jpegoptim qpdf poppler ImageMagick impala
 # Create these directories
 fd -d1 -td . .config/ -x mkdir -p ~/{}
 mkdir ~/.local/bin ~/.local/share/applications ~/.local/share/icons ~/.icons
@@ -108,18 +108,9 @@ Insatall some complementary tools :
 - [Go](https://go.dev/doc/install)
 - [xdeb](https://github.com/xdeb-org/xdeb?tab=readme-ov-file#usage)
 - [asdbctl](https://github.com/juliuszint/asdbctl)
-- [tessen](https://github.com/ayushnix/tessen)
-
-```sh
-cargo install atuin
-cargo install taplo-cli --locked
-cargo install tokei
-cargo install wl-screenrec
-cargo install harper-ls --locked
-cargo install markdown-oxide --locked
-```
-
-Sethup [hyprland](https://github.com/Makrennel/hyprland-void) repos, then :
+- [Rust](https://rust-lang.org/tools/install/)
+- Rust compiled tools : `atuin cargo-update clipvault codesnap-cli doxx du-dust dysk git-commit-stats git-graph harper-ls names oha onefetch oxker rage repgrep ripgrep_all taplo-cli television tokei typestyle`
+Sethup [hyprland](https://github.com/Encoded14/void-extra) repos, then :
 
 ```sh
 doas xbps-install hyprcursor hypridle hyprland hyprland-qtutils hyprlock xdg-desktop-portal-hyprland hyprpicker
