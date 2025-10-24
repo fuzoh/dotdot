@@ -14,9 +14,11 @@ Stow creates link high up in the file tree as possible, if you want to link only
 ```sh
 cd dotdot # Folder with the freshly cloned repo
 # Create all folders
-fd -d1 -td . .config/ -x mkdir -p ~/{}
-mkdir -p ~/.local/bin
-mkdir -p ~/.local/share/icons
+fd -d2 -td . .config/ -x mkdir -p ~/{}
+fd -d2 -td . .local/ -x mkdir -p ~/{}
+mkdir ~/.icons
+mkdir ~/.gnupg
+mkdir ~/Templates
 
 # Link the dotfiles
 stow .
