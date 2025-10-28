@@ -6,5 +6,3 @@ set window-title-home-tilde true
 set statusbar-basename true
 set selection-clipboard clipboard
 
-set adjust-open "best-fit"
-
