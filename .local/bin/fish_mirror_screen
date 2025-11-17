@@ -24,6 +24,7 @@ if test -n "$available_displays"
     # There is available display for mirroring
     if test "$is_mirror" = none
         notify-send Mirroring "starting mirroring" -t 1000
+        # Update script to use best resolution available for monitor and predefined scaling (<1920 x1, >1920 x2, >2880 x3)
         hyprctl keyword monitor HDMI-A-1,3840x2160,0x0,3
         hyprctl keyword monitor eDP-1, preferred, auto, 1, mirror, HDMI-A-1
     else
