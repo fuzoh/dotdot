@@ -39,6 +39,8 @@ fish_add_path -aP ~/.config/composer/vendor/bin
 # Start ssh agent
 fish_ssh_agent
 
+bind \es 'fish_commandline_prepend doas'
+
 # Some aliases
 alias ls="eza"
 alias lln="eza --long --git --all -snew"
