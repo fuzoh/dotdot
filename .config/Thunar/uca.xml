@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+<action>
+	<icon>foot</icon>
+	<name>Open Terminal Here</name>
+	<submenu></submenu>
+	<unique-id>1746535244340471-1</unique-id>
+	<command>foot --hold fish -C %f</command>
+	<description>Example for a custom action</description>
+	<range></range>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+<action>
+	<icon>x-office-document</icon>
+	<name>Merge PDF&apos;s</name>
+	<submenu></submenu>
+	<unique-id>1750658118516278-1</unique-id>
+	<command>merge_pdf %N</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*.pdf</patterns>
+	<other-files/>
+</action>
+<action>
+	<icon>image-x-generic</icon>
+	<name>Resize image to 1800/75%</name>
+	<submenu></submenu>
+	<unique-id>1750670608170151-2</unique-id>
+	<command>optim_images %N</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<image-files/>
+</action>
+<action>
+	<icon>image-x-generic</icon>
+	<name>PDF to PNG</name>
+	<submenu></submenu>
+	<unique-id>1751447425990415-1</unique-id>
+	<command>pdf_to_png %N</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*.pdf</patterns>
+	<other-files/>
+</action>
+<action>
+	<icon>image-x-generic</icon>
+	<name>Image to JPG</name>
+	<submenu></submenu>
+	<unique-id>1754467112262965-1</unique-id>
+	<command>convert_to_jpg %N</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<image-files/>
+</action>
+<action>
+	<icon>x-office-document</icon>
+	<name>compress PDF</name>
+	<submenu></submenu>
+	<unique-id>1758706479692943-1</unique-id>
+	<command>optim_pdf %N</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*.pdf</patterns>
+	<other-files/>
+</action>
+</actions>
