@@ -29,12 +29,12 @@ set -gx XDEB_PKGROOT ~/.config/xdeb
 
 # Add some variables to path
 #fish_add_path -aP ~/.cargo/bini
-source "$HOME/.cargo/env.fish"
+#source "$HOME/.cargo/env.fish"
 fish_add_path -aP ~/.local/bin
-fish_add_path -aP ~/go/bin
-fish_add_path -aP "$JAVA_HOME/bin"
-fish_add_path -aP ~/.symfony5/bin
-fish_add_path -aP ~/.config/composer/vendor/bin
+#fish_add_path -aP ~/go/bin
+#fish_add_path -aP "$JAVA_HOME/bin"
+#fish_add_path -aP ~/.symfony5/bin
+#fish_add_path -aP ~/.config/composer/vendor/bin
 
 # Start ssh agent
 fish_ssh_agent
@@ -42,6 +42,7 @@ fish_ssh_agent
 bind \es 'fish_commandline_prepend doas'
 
 # Some aliases
+alias hx="helix"
 alias ls="eza"
 alias lln="eza --long --git --all -snew"
 alias ll="eza --long --git --all"
