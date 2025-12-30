@@ -35,7 +35,7 @@ handle_event() {
             ;;
 
         monitorremovedv2)
-            brightnessctl set 50
+            brightnessctl set 50%
             ;;
     esac
 }
