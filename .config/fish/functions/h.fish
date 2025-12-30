@@ -1,3 +1,3 @@
 function h
-    dbus-run-session Hyprland
+    dbus-run-session start-hyprland
 end
