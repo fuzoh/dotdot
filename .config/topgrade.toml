@@ -12,10 +12,10 @@
 # pre_sudo = false
 
 # Sudo command to be used
-sudo_command = "doas"
+sudo_command = "sudo"
 
 # Disable specific steps - same options as the command line flag
-disable = ["pipx", "containers", "hyprpm", "composer", "vscode", "system", "git_repos", "yarn", "node", "jetbrains_aqua", "jetbrains_clion", "jetbrains_datagrip", "jetbrains_dataspell", "jetbrains_gateway", "jetbrains_goland", "jetbrains_idea", "jetbrains_mps", "jetbrains_phpstorm", "jetbrains_pycharm", "jetbrains_rider", "jetbrains_rubymine", "jetbrains_rustrover", "jetbrains_toolbox", "jetbrains_webstorm"]
+disable = ["pipx", "containers", "hyprpm", "composer", "config_update", "vscode", "git_repos", "yarn", "node", "jetbrains_aqua", "jetbrains_clion", "jetbrains_datagrip", "jetbrains_dataspell", "jetbrains_gateway", "jetbrains_goland", "jetbrains_idea", "jetbrains_mps", "jetbrains_phpstorm", "jetbrains_pycharm", "jetbrains_rider", "jetbrains_rubymine", "jetbrains_rustrover", "jetbrains_toolbox", "jetbrains_webstorm"]
 
 # Ignore failures for these steps
 # ignore_failures = ["powershell"]
@@ -84,7 +84,7 @@ disable = ["pipx", "containers", "hyprpm", "composer", "vscode", "system", "git_
 # Commands to run before anything
 [pre_commands]
 # "Emacs Snapshot" = "rm -rf ~/.emacs.d/elpa.bak && cp -rl ~/.emacs.d/elpa ~/.emacs.d/elpa.bak"
-"Fast Node Manager" = "fnm install 24 && fnm default 24 && fnm use 24"
+#"Fast Node Manager" = "fnm install 24 && fnm default 24 && fnm use 24"
 
 # Commands to run after anything
 [post_commands]
