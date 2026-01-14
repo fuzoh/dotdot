@@ -31,7 +31,7 @@ set -gx XDEB_PKGROOT ~/.config/xdeb
 #fish_add_path -aP ~/.cargo/bini
 #source "$HOME/.cargo/env.fish"
 fish_add_path -aP ~/.local/bin
-#fish_add_path -aP ~/go/bin
+fish_add_path -aP ~/go/bin
 #fish_add_path -aP "$JAVA_HOME/bin"
 #fish_add_path -aP ~/.symfony5/bin
 #fish_add_path -aP ~/.config/composer/vendor/bin
@@ -77,6 +77,7 @@ abbr -a ph "git push"
 abbr -a sm "git switch main && git pull"
 abbr -a sn "git switch -c"
 abbr -a gl "git log --graph --decorate --oneline --all"
+abbr -a gl2d 'git log --pretty=format: --name-only --since="2 days ago" | sort | uniq'
 
 abbr -a dup "docker compose up"
 abbr -a ddown "docker compose down"
@@ -84,10 +85,13 @@ abbr -a ddown "docker compose down"
 abbr -a d 'date "+%Y-%m-%d"'
 abbr -a dt 'date "+%Y-%m-%d_%H:%M"'
 
-abbr -a i 'doas xbps-install'
+#abbr -a i 'doas xbps-install'
 
 abbr -a g gemini
 abbr -a c claude
+abbr -a oc opencode
+
+abbr -a zed zeditor
 
 if status is-interactive
     # Commands to run in interactive sessions can go here
