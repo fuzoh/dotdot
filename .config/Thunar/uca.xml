@@ -67,4 +67,15 @@
 	<patterns>*.pdf</patterns>
 	<other-files/>
 </action>
+<action>
+	<icon>foot</icon>
+	<name>Open in opencode</name>
+	<submenu></submenu>
+	<unique-id>1767795649934982-1</unique-id>
+	<command>foot --hold fish -c opencode %f</command>
+	<description></description>
+	<range></range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
 </actions>
