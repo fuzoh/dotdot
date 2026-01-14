@@ -23,17 +23,17 @@
 
     "modules-left": [
         "network",
-        "custom/taskwarrior",
-        "custom/taskthisweek",
-        "custom/taskoverdue"
+        "memory",
+        "cpu",
+        "temperature"
+        //"custom/taskwarrior",
+        //"custom/taskthisweek",
+        //"custom/taskoverdue"
     ],
     "modules-center": [
         "hyprland/workspaces",  
     ],
     "modules-right": [
-        "memory",
-        "cpu",
-        "temperature",
         "battery",
         "backlight",
         //"pulseaudio",
