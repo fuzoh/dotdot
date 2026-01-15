@@ -1,0 +1,9 @@
+#!/usr/bin/env fish
+
+set folder (cat /dev/null | tofi --prompt-text "Open : ")
+
+if test -n "$folder"
+
+    /usr/bin/zeditor (zoxide query "$folder")
+
+end
