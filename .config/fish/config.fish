@@ -52,8 +52,8 @@ function copy
     bat $argv | wl-copy
 end
 # Special alias for code
-function code --wraps /usr/share/code/code
-    /usr/share/code/code --password-store="gnome-libsecret" $argv & disown
+function code --wraps /usr/bin/code
+    /usr/bin/code --password-store="gnome-libsecret" $argv & disown
 end
 abbr -a sail "./vendor/bin/sail"
 abbr -a artisan "php artisan"
