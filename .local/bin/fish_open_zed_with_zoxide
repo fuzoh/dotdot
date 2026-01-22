@@ -4,6 +4,6 @@ set folder (cat /dev/null | tofi --prompt-text "Open : ")
 
 if test -n "$folder"
 
-    /usr/bin/zeditor -n (zoxide query "$folder")
+    /usr/bin/zeditor -n (zoxide query (string split -n " " $folder))
 
 end

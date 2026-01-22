@@ -4,6 +4,6 @@ set needle (cat /dev/null | tofi --prompt-text "Goto : ")
 
 if test -n "$needle"
 
-    thunar (zoxide query "$needle")
+    thunar (zoxide query (string split -n " " $needle))
 
 end
