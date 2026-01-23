@@ -1,9 +1,21 @@
 #!/usr/bin/env fish
 
-set folder (cat /dev/null | tofi --prompt-text "Open : ")
+# Capture user input from tofi
+set input (cat /dev/null | tofi --prompt-text "Open : ")
 
-if test -n "$folder"
+# Exit if no input was provided (e.g., user hit Escape)
+if test -z "$input"
+    exit 0
+end
 
-    /usr/bin/code --password-store="gnome-libsecret" (zoxide query (string split -n " " $folder))
+# Attempt to resolve the path using zoxide
+# stderr is redirected to /dev/null to suppress the default zoxide error message
+set target_path (zoxide query (string split -n " " $input) 2>/dev/null)
 
+if test $status -eq 0
+    # Match found: Launch zeditor
+    /usr/bin/code --password-store="gnome-libsecret" $target_path
+else
+    # No match: Trigger notification via libnotify
+    notify-send -a Zoxide -i folder-query "No match found" "Could not find a path for: $input"
 end
