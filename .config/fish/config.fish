@@ -87,7 +87,7 @@ abbr -a dt 'date "+%Y-%m-%d_%H:%M"'
 
 #abbr -a i 'doas xbps-install'
 
-abbr -a g gemini
+abbr -a g "npx @google/gemini-cli"
 abbr -a c claude
 abbr -a oc opencode
 
@@ -108,6 +108,9 @@ if not string match -q -- $PNPM_HOME $PATH
     set -gx PATH "$PNPM_HOME" $PATH
 end
 # pnpm end
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
 
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
