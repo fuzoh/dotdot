@@ -78,4 +78,15 @@
 	<patterns>*</patterns>
 	<directories/>
 </action>
+<action>
+	<icon>image-x-generic</icon>
+	<name>Resize image to 50%</name>
+	<submenu></submenu>
+	<unique-id>1770301223126079-1</unique-id>
+	<command>optim_images_50 %N</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<image-files/>
+</action>
 </actions>
