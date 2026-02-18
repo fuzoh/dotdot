@@ -23,7 +23,7 @@ set -gx ELECTRON_OZONE_PLATFORM_HINT wayland
 
 set -gx GPG_TTY (tty)
 
-set -gx JAVA_HOME /usr/lib/jvm/default-jdk
+set -gx JAVA_HOME /usr/lib/jvm/java-25-openjdk
 
 set -gx XDEB_PKGROOT ~/.config/xdeb
 
