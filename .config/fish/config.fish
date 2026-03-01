@@ -3,7 +3,7 @@
 set -gx XDG_CONFIG_HOME ~/.config
 set -gx XDG_DATA_HOME ~/.local/share
 #set -gx XDG_RUNTIME_DIR /run/user/1000
-set -gx EDITOR hx
+set -gx EDITOR helix
 
 set -gx LIBVA_DRIVER_NAME radeonsi
 set -gx VDPAU_DRIVER radeonsi
