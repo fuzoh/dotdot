@@ -4,12 +4,12 @@ default_color = [
     0,
     0,
 ]
-default_thickness = 8.0
+default_thickness = 5.0
 default_eraser_size = 12.0
 default_eraser_mode = "brush"
 marker_opacity = 0.32
 default_fill_enabled = false
-default_font_size = 30.0
+default_font_size = 19.26814516129032
 hit_test_tolerance = 6.0
 hit_test_linear_threshold = 400
 undo_stack_limit = 100
@@ -161,10 +161,10 @@ show_marker_opacity_section = false
 context_aware_ui = true
 show_preset_toasts = true
 show_tool_preview = false
-top_offset = 855.54296875
-top_offset_y = 9.58203125
-side_offset = 419.921875
-side_offset_x = -14.62890625
+top_offset = 263.23828125
+top_offset_y = 16.33203125
+side_offset = 35.19140625
+side_offset_x = 2227.8203125
 force_inline = false
 
 [ui.toolbar.mode_overrides.simple]
