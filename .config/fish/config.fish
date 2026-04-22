@@ -23,12 +23,8 @@ set -gx ELECTRON_OZONE_PLATFORM_HINT wayland
 
 set -gx GPG_TTY (tty)
 
-set -gx JAVA_HOME /usr/lib/jvm/java-25-openjdk
-
-set -gx XDEB_PKGROOT ~/.config/xdeb
-
 # Add some variables to path
-#fish_add_path -aP ~/.cargo/bini
+fish_add_path -aP ~/.cargo/bin
 #source "$HOME/.cargo/env.fish"
 fish_add_path -aP ~/.local/bin
 fish_add_path -aP ~/go/bin
@@ -88,7 +84,7 @@ abbr -a dt 'date "+%Y-%m-%d_%H:%M"'
 
 #abbr -a i 'doas xbps-install'
 
-abbr -a g "npx @google/gemini-cli"
+abbr -a g gemini
 abbr -a c claude
 abbr -a oc opencode
 
